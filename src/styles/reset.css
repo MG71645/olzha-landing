@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  overflow-y: auto;
+  overflow-y: overlay;
+  -webkit-text-size-adjust: 100%; /* iPhone landscape mode fix */
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+img {
+  vertical-align: middle; /* Remove bottom gap */
+  user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+pre {
+  margin: 0;
+  font: inherit;
+}
+
+ul, ol, dl {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: block;
+}
+
+dd {
+  margin: 0
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  font: inherit;
+}
+
+label {
+  display: inline-block;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+input, select, textarea {
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+}
+
+input[type="number"], input[type="datetime-local"], input[type="month"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-outer-spin-button, input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="month"]::-webkit-outer-spin-button, input[type="month"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="range"] {
+  margin: 0
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input:disabled {
+  cursor: default;
+  color: inherit;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+textarea {
+  display: block;
+  resize: vertical;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  text-align: inherit;
+  font: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+button:disabled {
+  cursor: default;
+  color: inherit;
+}
+
+option {
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
+[contenteditable] {
+  cursor: text;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: unset;
+  text-align: left;
+}
+
+th {
+  padding: 0;
+  font: inherit;
+}
+
+td {
+  padding: 0;
+}
+
+hr {
+  border: none;
+  margin: 0;
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
