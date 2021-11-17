@@ -19,7 +19,8 @@
         "ru": "О компании",
         "en": "About company"
       },
-      "background": "#E2C275"
+      "background": "#E2C275",
+      "theme": "gold"
     },
     {
       "id": "structure",
@@ -29,7 +30,8 @@
         "ru": "Структура Холдинга",
         "en": "Holding structure"
       },
-      "background": "#93B458"
+      "background": "#93B458",
+      "theme": "green"
     },
     {
       "id": "indicators",
@@ -52,7 +54,8 @@
         "ru": "Растениеводство",
         "en": "Crop production"
       },
-      "background": "#93B458"
+      "background": "#93B458",
+      "theme": "green"
     },
     {
       "id": "animals",
@@ -62,7 +65,8 @@
         "ru": "Животноводство",
         "en": "Animal husbandry"
       },
-      "background": "#E2C275"
+      "background": "#E2C275",
+      "theme": "gold"
     },
     {
       "id": "trading",

@@ -25,11 +25,22 @@ html
   --h2-font-size: #{d(35)}
   --h2-margin-bottom: calc(#{d(64)} - .2em)
   --language-color: white
+  --language-hover-color: #be9959
   --socials-color: white
+  --socials-hover-color: #be9959
 
   &[data-theme="light"]
     --language-color: #D6B360
+    --language-hover-color: #FDF4DE
     --socials-color: #D6B360
+    --socials-hover-color: #FDF4DE
+
+  &[data-theme="gold"]
+    --socials-hover-color: #D6B360
+
+  &[data-theme="green"]
+    --language-hover-color: #93B458
+    --socials-hover-color: #93B458
 
 [color="gray"]
   color: #4D4A49
@@ -57,10 +68,10 @@ html
 .video
   position: absolute
   //top: 50%
+  top: 0
   left: 0
   width: 100%
   //transform: translateY(-50%)
-  top: 0
 
   @media (max-aspect-ratio: 16/9)
     top: 0
