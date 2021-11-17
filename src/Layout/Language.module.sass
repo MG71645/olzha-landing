@@ -1,0 +1,35 @@
+@import "styles/responsive"
+
+.container
+  user-select: none
+  position: fixed
+  top: 0
+  right: var(--slide-padding-right)
+  height: var(--header-height)
+  display: flex
+  align-items: flex-end
+
+.box
+  cursor: pointer
+  width: d(58 - 10)
+  height: d(30)
+  border: 1px solid var(--language-color)
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: d(10) 0 d(10) 0
+  font-size: d(10)
+  text-transform: uppercase
+  font-weight: 500
+  color: var(--language-color)
+  transition: background .25s, color .25s
+
+  &:hover
+    background: var(--language-color)
+    color: white
+
+.chevron
+  display: none
+  margin-left: d(6)
+  font-size: d(18)
+  transform: translateY(-15%)

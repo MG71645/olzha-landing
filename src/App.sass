@@ -1,0 +1,107 @@
+@import "styles/responsive"
+
+html
+  background: #4D4A49
+  font-size: 100vw / 1366 * 14
+  line-height: 1.4
+
+.App
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  font-family: Gotham, sans-serif
+  -webkit-font-smoothing: antialiased
+  color: white
+  transition: background .5s
+  --header-height: #{d(110)}
+  --header-margin-bottom: #{d(50)}
+  --sidebar-width: #{d(286)}
+  --slide-padding-left: #{d(72)}
+  --slide-padding-right: #{d(80)}
+  --slide-padding-bottom: #{d(32)}
+  --footer-padding-bottom: #{d(32)}
+  --h2-font-size: #{d(35)}
+  --h2-margin-bottom: calc(#{d(64)} - .2em)
+  --language-color: white
+  --socials-color: white
+
+  &[data-theme="light"]
+    --language-color: #D6B360
+    --socials-color: #D6B360
+
+[color="gray"]
+  color: #4D4A49
+
+[color="gold"]
+  color: #D6B360
+
+.header
+  flex-shrink: 0
+  height: var(--header-height)
+  display: flex
+  align-items: flex-end
+  margin-bottom: var(--header-margin-bottom)
+  padding-right: d(80)
+
+.background
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  overflow: hidden
+  //background: url(/assets/img/background.jpg) center / cover no-repeat
+
+.video
+  position: absolute
+  //top: 50%
+  left: 0
+  width: 100%
+  //transform: translateY(-50%)
+  top: 0
+
+  @media (max-aspect-ratio: 16/9)
+    top: 0
+    left: 50%
+    width: auto
+    height: 100%
+    transform: translateX(-50%)
+
+.h1
+  margin-left: -.085em
+  font-size: d(100)
+  line-height: .75
+  font-weight: 500
+
+.h2
+  margin-left: -.085em
+  font-size: var(--h2-font-size)
+  font-weight: 500
+  color: #4D4A49
+  margin-bottom: -.35em
+
+.h3
+  font-size: d(25)
+  font-weight: 500
+  margin-bottom: d(20)
+
+[clip~="top"]
+  margin-top: -.35em
+
+.hr
+  margin-block: d(8)
+  height: 1px
+  background: rgba(255,255,255, .3)
+
+.slide
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  padding-left: calc(var(--sidebar-width) + var(--slide-padding-left))
+  padding-bottom: var(--slide-padding-bottom)
+  padding-right: var(--slide-padding-right)
+  overflow-y: auto

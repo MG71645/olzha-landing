@@ -1,0 +1,29 @@
+@import "styles/responsive"
+
+.container
+  padding-bottom: d(100)
+
+.list
+  display: grid
+  gap: d(50)
+  padding-right: d(134)
+
+.item
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: d(32)
+  align-items: flex-start
+
+  &:nth-child(2n) .image
+    order: 1
+    border-radius: 20% 0 20% 0
+
+.image
+  flex-shrink: 0
+  padding-top: 80%
+  border-top-right-radius: 20%
+  border-bottom-left-radius: 20%
+  background: #4D4A49 center / cover no-repeat
+
+.body
+  white-space: pre-wrap

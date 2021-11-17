@@ -1,0 +1,61 @@
+@import "styles/responsive"
+
+.container
+  user-select: none
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  width: var(--sidebar-width)
+  display: flex
+  flex-direction: column
+  border-right: 1px solid rgba(255,255,255, .3)
+  padding-left: d(80)
+  transition: border .25s
+
+.logo
+  cursor: pointer
+  width: d(100)
+  display: flex
+  flex-direction: column
+
+.menu
+  margin-top: d(-13)
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  font-weight: 500
+  --color: rgba(255,255,255, .7)
+  color: var(--color)
+
+.link
+  cursor: pointer
+  line-height: .75
+  padding-block: d(13)
+  transition: color .5s
+  position: relative
+  --activeColor: #4D4A49
+
+  &:before
+    content: ''
+    display: block
+    width: d(25)
+    height: 1px
+    background: var(--color)
+    position: absolute
+    right: 100%
+    top: 50%
+    margin-right: d(24)
+
+  &[disabled]
+    cursor: default
+    color: var(--activeColor)
+
+    &:before
+      width: d(60)
+      background: var(--activeColor)
+
+.footer
+  padding-bottom: var(--footer-padding-bottom)
+  font-size: d(10)

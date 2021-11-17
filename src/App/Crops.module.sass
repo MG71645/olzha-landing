@@ -1,0 +1,93 @@
+@import "styles/responsive"
+
+.container
+  display: flex
+  flex-direction: column
+
+.layout
+  flex-grow: 1
+  margin-top: d(30)
+  border-top: 1px solid rgba(255,255,255, .3)
+  display: flex
+
+.block
+  width: 100%
+  padding-top: d(21)
+
+  &:nth-child(2n - 1)
+    padding-right: d(40)
+    border-right: 1px solid rgba(255,255,255, .3)
+
+  &:nth-child(2n)
+    padding-left: d(40)
+
+.title
+  font-size: d(45)
+  font-weight: 500
+  line-height: 1
+
+.subtitle
+  margin-top: d(8)
+  font-weight: 500
+
+.list
+  margin-top: d(16)
+  display: grid
+  gap: d(8)
+
+  .item
+    gap: d(26)
+
+  .h2
+    font-size: d(30)
+    font-weight: 500
+
+  .image
+    width: d(90)
+
+.item
+  display: flex
+  align-items: center
+  white-space: pre-wrap
+
+.grid
+  margin-top: d(20)
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  gap: d(10) d(2)
+  font-size: d(10)
+
+  .item
+    flex-direction: column
+    text-align: center
+
+  .image
+    width: 100%
+
+.products
+  margin-top: d(24)
+  display: flex
+  align-items: center
+  gap: d(37)
+
+  .img
+    width: d(110)
+
+.ul
+  display: grid
+  gap: d(5)
+
+.li
+  display: flex
+
+  &:before
+    content: '●'
+    margin-right: d(11)
+
+.leaves
+  height: d(245)
+  max-height: 25vh
+  position: fixed
+  bottom: d(-14)
+  right: d(187)
+  z-index: -1

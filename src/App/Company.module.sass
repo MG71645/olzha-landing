@@ -1,0 +1,40 @@
+@import "styles/responsive"
+
+.container
+  color: #4D4A49
+  --flower-width: calc((100vh - var(--header-height)) * 1956 / 3502 * 1.08)
+
+.body
+  padding-right: calc(var(--flower-width) - var(--slide-padding-right))
+
+.values
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  gap: d(38)
+  padding-right: d(100)
+
+.value
+  display: flex
+  gap: d(18)
+  align-items: center
+
+.icon
+  width: d(37)
+  height: d(37)
+  background: url(/assets/img/icons/value.svg) center / contain no-repeat
+
+.sunflower
+  position: fixed
+  z-index: -1
+  width: var(--flower-width)
+  bottom: 0
+  right: 17px
+  transform: translateY(8%)
+
+.barley
+  position: fixed
+  z-index: -1
+  width: calc(var(--flower-width) * .5)
+  bottom: calc(var(--flower-width) * -.6)
+  right: calc(var(--flower-width) * .55)
+  transform: rotate(-30deg)

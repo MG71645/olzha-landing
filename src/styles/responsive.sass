@@ -1,0 +1,22 @@
+@function mp($px)
+  @return 100vw / 320 * $px
+
+//@function d($px)
+//  @return 100vw / 1366 * $px
+
+@function d($px)
+  @return 1rem / 14 * $px
+
+$sizes: (mp-min: 0, mp-max: 567px, ml-min: 568px, ml-max: 767px, tp-min: 768px, tp-max: 1023px, tl-min: 1024px, tl-max: 1366px, ds-min: 1367px, ds-max: 1599px, dm-min: 1600px, dm-max: 1919px, dl-min: 1920px, dl-max: 2200px)
+
+@mixin screen($from, $to: 'none')
+  @if ($to != 'none')
+    @if ($to != 'other')
+      @media (min-width: map-get($sizes, '#{$from}-min')) and (max-width: map-get($sizes, '#{$to}-max'))
+        @content
+    @else
+      @media (min-width: map-get($sizes, '#{$from}-min'))
+        @content
+  @else
+    @media (min-width: map-get($sizes, '#{$from}-min')) and (max-width: map-get($sizes, '#{$from}-max'))
+      @content

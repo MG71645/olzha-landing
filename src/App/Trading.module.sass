@@ -1,0 +1,260 @@
+@import "styles/responsive"
+
+.container
+  color: #4D4A49
+  --tabs-height: calc(1.4rem + #{d(8 * 2)})
+  --tabs-margin-bottom: #{d(28)}
+  padding-bottom: 0
+
+.tabs
+  margin-top: d(-12)
+  display: flex
+  font-weight: 500
+  user-select: none
+  gap: d(8)
+  //margin-bottom: d(28)
+  margin-left: d(16)
+
+.tab
+  cursor: pointer
+  padding: d(8) d(15)
+  border-top-left-radius: d(10)
+  border-bottom-right-radius: d(10)
+  padding-block: d(7)
+  font-size: d(13)
+  transition: background .25s, color .25s
+
+  &:not([disabled])
+    box-shadow: 0 0 0 1px #E2C275 inset
+    color: #D6B360
+
+  &[disabled]
+    cursor: default
+    background: #E2C275
+    color: white
+
+  &:hover
+    background: #E2C275
+    color: white
+
+.map
+  width: 116%
+  max-width: calc((100vh - (var(--header-height) + var(--header-margin-bottom) + var(--tabs-height) + var(--tabs-margin-bottom))) * 1.78)
+  //transform: translateX(-8%)
+  position: relative
+
+.marker
+  cursor: pointer
+  position: absolute
+  width: d(23)
+  height: d(23)
+  background: white
+  border-radius: 50%
+  font-weight: 500
+  display: flex
+  justify-content: center
+  align-items: center
+  transform: translate(-50%, -50%)
+  box-sizing: content-box
+  background-clip: content-box
+  box-shadow: 0 0 0 d(9) rgba(255,255,255, .4)
+
+  &:hover
+    z-index: 1
+
+  &:not(:hover) .popup
+    display: none
+
+.label
+  position: absolute
+  font-weight: 400
+  white-space: pre-wrap
+
+  &:not([data-position])
+    left: 100%
+    margin-left: d(9 + 4)
+
+  &[data-position="top"]
+    left: 50%
+    bottom: 100%
+    margin-bottom: d(4)
+    transform: translateX(-50%)
+    text-align: center
+
+  &[data-position="bottom"]
+    left: 50%
+    top: 100%
+    margin-top: d(4)
+    transform: translateX(-50%)
+    text-align: center
+
+  &[data-position="top left"]
+    right: 50%
+    bottom: 100%
+    margin-bottom: d(4)
+    text-align: right
+
+  &[data-position="left"]
+    right: 100%
+    margin-right: d(9 + 4)
+    text-align: right
+
+.popup
+  position: absolute
+  background: white
+  top: 100%
+  left: 100%
+  padding: d(28)
+  display: flex
+  gap: d(25)
+  border-top-right-radius: d(40)
+  border-bottom-left-radius: d(40)
+  box-shadow: d(8) d(8) d(20) rgba(226, 194, 117, .4)
+
+  &[data-position~="top"]
+    top: auto
+    bottom: 100%
+
+  &[data-position~="left"]
+    left: auto
+    right: 100%
+
+  &[data-position~="right"], &[data-position~="bottom"]
+    border-radius: d(40) 0 d(40) 0
+
+.big
+  font-size: d(30)
+  line-height: 1
+  margin-bottom: d(8)
+
+.body
+  white-space: pre-wrap
+
+.title
+  font-weight: 500
+
+.countries
+  width: fit-content
+  display: flex
+  gap: d(5)
+  align-items: flex-end
+  border-bottom: 1px solid #E2C275
+
+.country
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  position: relative
+
+.name
+  position: absolute
+  top: 100%
+  margin-top: d(31)
+  white-space: pre
+
+.amount
+  width: d(135)
+  white-space: pre
+  border-radius: 1000px
+  padding: d(8) d(8) d(4)
+  background: white
+  line-height: d(18)
+  font-weight: 500
+  margin-bottom: d(20)
+  position: relative
+
+  &:after
+    content: ''
+    display: block
+    width: d(12)
+    height: d(12)
+    background: white
+    position: absolute
+    bottom: d(-6)
+    left: calc(50% - #{d(6)})
+    transform: rotate(45deg)
+
+@keyframes trunk
+  0%
+    transform: scaleY(0)
+  100%
+    transform: scaleY(1)
+
+.seeds
+  position: relative
+
+  &:before
+    content: ''
+    display: block
+    width: 1px
+    background: #E2C275
+    position: absolute
+    top: 0
+    left: d(20)
+    bottom: d(-15)
+    transform-origin: bottom center
+    //animation: trunk 1s ease-in-out backwards
+
+  &:after
+    content: ''
+    display: block
+    width: d(5)
+    height: d(5)
+    background: #E2C275
+    border-radius: d(2.5)
+    position: absolute
+    top: 100%
+    margin-top: d(15)
+    left: d(18)
+
+@keyframes pairs
+  0%
+    transform: translateY(100%)
+  100%
+    transform: translateY(0)
+
+.pairs
+  display: grid
+  padding-bottom: d(12)
+  //animation: pairs 1s ease-in-out backwards
+
+.pair
+  display: flex
+  gap: d(5)
+
+@keyframes seed
+  0%
+    transform: translate(10%, #{d(4)}) rotate(45deg) scale(0)
+  100%
+    transform: translate(10%, #{d(4)}) rotate(45deg) scale(1)
+
+@keyframes seedLeft
+  0%
+    transform: scale(0)
+  100%
+    transform: scale(1)
+
+@keyframes seedRight
+  0%
+    transform: scale(0) translateY(-100%) rotate(90deg)
+  100%
+    transform: scale(1) translateY(-100%) rotate(90deg)
+
+.seed
+  width: d(18)
+  height: d(18)
+  border-top-right-radius: 80%
+  border-bottom-left-radius: 80%
+  background: #E2C275
+  //animation: seedLeft 1s ease-in-out backwards
+  transform-origin: right bottom
+
+  &.top
+    transform: translate(10%, #{d(4)}) rotate(45deg)
+    //animation-name: seed
+
+  + .seed
+    transform-origin: left bottom
+    transform: translateY(-100%) rotate(90deg)
+    //animation-name: seedRight

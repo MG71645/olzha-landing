@@ -1,0 +1,217 @@
+{
+  "title": {
+    "ru": "Трейдинг",
+    "en": "Trading"
+  },
+  "units": {
+    "mil": {
+      "ru": "млн",
+      "en": "mil"
+    },
+    "bil": {
+      "ru": "млрд",
+      "en": "bil"
+    }
+  },
+  "world": {
+    "tab": {
+      "ru": "Топ-10 стран-экспортеров пшеницы"
+    },
+    "popup": {
+      "tons": {
+        "ru": "тонн",
+        "en": "ton"
+      },
+      "percent": {
+        "ru": "мирового экспорта"
+      }
+    },
+    "countries": [
+      {
+        "title": {
+          "ru": "Россия",
+          "en": "Russia"
+        },
+        "value": "40",
+        "percent": "20",
+        "top": "19%",
+        "left": "72%",
+        "popup": "bottom left"
+      },
+      {
+        "title": {
+          "ru": "Евросоюз",
+          "en": "European\nUnion"
+        },
+        "value": "33",
+        "percent": "16",
+        "top": "35%",
+        "left": "49%",
+        "label": "left"
+      },
+      {
+        "title": {
+          "ru": "США",
+          "en": "USA"
+        },
+        "value": "24,5",
+        "percent": "12",
+        "top": "38%",
+        "left": "20%",
+        "label": "left"
+      },
+      {
+        "title": {
+          "ru": "Канада",
+          "en": "Canada"
+        },
+        "value": "23,5",
+        "percent": "11,6",
+        "top": "20%",
+        "left": "20%",
+        "label": "left"
+      },
+      {
+        "title": {
+          "ru": "Украина",
+          "en": "Ukraine"
+        },
+        "value": "20,5",
+        "percent": "10",
+        "top": "34%",
+        "left": "57%",
+        "label": "top"
+      },
+      {
+        "title": {
+          "ru": "Австралия",
+          "en": "Australia"
+        },
+        "value": "20",
+        "percent": "10",
+        "top": "81%",
+        "left": "86%",
+        "popup": "top left",
+        "label": "left"
+      },
+      {
+        "title": {
+          "ru": "Аргентина",
+          "en": "Argentina"
+        },
+        "value": "13,5",
+        "percent": "6,6",
+        "top": "84%",
+        "left": "29.7%",
+        "popup": "top right"
+      },
+      {
+        "title": {
+          "ru": "Казахстан",
+          "en": "Kazakhstan"
+        },
+        "value": "8",
+        "percent": "4",
+        "top": "33%",
+        "left": "66%"
+      },
+      {
+        "title": {
+          "ru": "Турция",
+          "en": "Turkey"
+        },
+        "value": "6,5",
+        "percent": "6,5",
+        "top": "37%",
+        "left": "54%",
+        "label": "bottom"
+      },
+      {
+        "title": {
+          "ru": "Индия",
+          "en": "India"
+        },
+        "value": "2,5",
+        "percent": "1",
+        "top": "50.5%",
+        "left": "70.5%",
+        "popup": "bottom left"
+      }
+    ]
+  },
+  "kazakhstan": {
+    "tab": {
+      "ru": "Экспортные направления Олжа Агро"
+    },
+    "body": {
+      "ru": "Олжа Агро Трейд – это трейдинговое подразделение агрохолдинга «Олжа Агро», которое занимается экспортом зерновых и масличных культур. В среднем на Олжа Агро Трейд приходится 5% от всего экспорта зерновых и масличных культур из Казахстана.\n \nОсновные базисы поставки: DAP Сарыагаш, DAP Болашак, DAP Достык, FOB Актау."
+    },
+    "countries": {
+      "title": {
+        "ru": "Экспорт зерновых в год:"
+      },
+      "list": [
+        {
+          "title": {
+            "ru": "Узбекистан",
+            "en": "Uzbekistan"
+          },
+          "amount": {
+            "ru": "50 000\nтонн"
+          },
+          "height": 5
+        },
+        {
+          "title": {
+            "ru": "Таджикистан",
+            "en": "Tajikistan"
+          },
+          "amount": {
+            "ru": "33 000\nтонн"
+          },
+          "height": 3
+        },
+        {
+          "title": {
+            "ru": "Европа",
+            "en": "Europe"
+          },
+          "amount": {
+            "ru": "33 000\nтонн"
+          },
+          "height": 3
+        },
+        {
+          "title": {
+            "ru": "Иран",
+            "en": "Iran"
+          },
+          "amount": {
+            "ru": "26 000\nтонн"
+          },
+          "height": 2
+        },
+        {
+          "title": {
+            "ru": "Китай",
+            "en": "China"
+          },
+          "amount": {
+            "ru": "5 000\nтонн"
+          },
+          "height": 1
+        },
+        {
+          "title": {
+            "ru": "Внутренний\nрынок",
+            "en": ""
+          },
+          "amount": {
+            "ru": "50 000\nтонн"
+          },
+          "height": 5
+        }
+      ]
+    }
+  }
+}

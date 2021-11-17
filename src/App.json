@@ -1,0 +1,94 @@
+{
+  "slides": [
+    {
+      "id": "home",
+      "link": "",
+      "disabled": false,
+      "navName": {
+        "ru": "Олжа Агро",
+        "en": "Olzha Agro"
+      },
+      "background": "rgba(100, 50, 0, .5)",
+      "activeColor": "#E2C275"
+    },
+    {
+      "id": "company",
+      "link": "company",
+      "disabled": false,
+      "navName": {
+        "ru": "О компании",
+        "en": "About company"
+      },
+      "background": "#E2C275"
+    },
+    {
+      "id": "structure",
+      "link": "structure",
+      "disabled": false,
+      "navName": {
+        "ru": "Структура Холдинга",
+        "en": "Holding structure"
+      },
+      "background": "#93B458"
+    },
+    {
+      "id": "indicators",
+      "link": "indicators",
+      "disabled": false,
+      "navName": {
+        "ru": "Основные показатели",
+        "en": "Key indicators"
+      },
+      "background": "#FDF4DE",
+      "color": "rgba(77, 74, 73, .4)",
+      "border": "rgba(213, 213, 213, .7)",
+      "theme": "light"
+    },
+    {
+      "id": "crops",
+      "link": "crops",
+      "disabled": false,
+      "navName": {
+        "ru": "Растениеводство",
+        "en": "Crop production"
+      },
+      "background": "#93B458"
+    },
+    {
+      "id": "animals",
+      "link": "animals",
+      "disabled": false,
+      "navName": {
+        "ru": "Животноводство",
+        "en": "Animal husbandry"
+      },
+      "background": "#E2C275"
+    },
+    {
+      "id": "trading",
+      "link": "trading",
+      "disabled": false,
+      "navName": {
+        "ru": "Трейдинг",
+        "en": "Trading"
+      },
+      "background": "#FDF4DE",
+      "color": "rgba(77, 74, 73, .4)",
+      "border": "rgba(213, 213, 213, .7)",
+      "theme": "light"
+    },
+    {
+      "id": "contacts",
+      "link": "contacts",
+      "disabled": false,
+      "navName": {
+        "ru": "Контакты",
+        "en": "Contacts"
+      },
+      "background": "#FDF4DE",
+      "color": "rgba(77, 74, 73, .4)",
+      "border": "rgba(213, 213, 213, .7)",
+      "theme": "light"
+    }
+  ]
+}

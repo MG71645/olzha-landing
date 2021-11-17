@@ -1,0 +1,55 @@
+@import "styles/responsive"
+
+.container
+  font-weight: 500
+
+.indicators
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: d(32)
+
+.h1
+  font-size: d(45)
+  line-height: 1
+  margin-bottom: d(16)
+
+.h2
+  font-size: d(30)
+  line-height: 1
+  margin-bottom: d(10)
+
+.area
+  display: flex
+  background: #64C9CF url(/assets/img/farmland.png) bottom -10% center / contain no-repeat
+  border-top-right-radius: 15%
+  border-bottom-left-radius: 15%
+
+  &:before
+    content: ''
+    display: block
+    width: 0
+    padding-top: 100%
+
+  .layout
+    display: grid
+    grid-template-rows: 1fr 1fr
+
+  .block
+    padding: d(39) d(42) 0
+
+.grid
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: d(32)
+
+.item
+  background: #E2C275
+  padding: d(50) d(32) 0 d(27)
+
+  &:nth-child(1), &:nth-child(4)
+    border-top-right-radius: 15%
+    border-bottom-left-radius: 15%
+
+  &:nth-child(2), &:nth-child(3)
+    border-top-left-radius: 15%
+    border-bottom-right-radius: 15%

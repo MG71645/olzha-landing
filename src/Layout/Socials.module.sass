@@ -1,0 +1,32 @@
+@import "styles/responsive"
+
+.container
+  position: fixed
+  bottom: var(--footer-padding-bottom)
+  right: var(--slide-padding-right)
+  display: flex
+  gap: d(12)
+
+.social
+  width: d(24)
+  height: d(24)
+
+.icon
+  width: 100%
+  height: 100%
+  border-radius: 50%
+  border: 1px solid var(--socials-color)
+  transition: background .25s
+
+  &:hover
+    background: var(--socials-color)
+
+    .path
+      fill: white
+
+.circle
+  stroke: var(--socials-color)
+
+.path
+  fill: var(--socials-color)
+  transition: fill .25s
