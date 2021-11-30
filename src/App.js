@@ -1,8 +1,12 @@
 import React from 'react'
+import Swipe from 'react-easy-swipe'
+import Wheel from 'react-scroll-wheel-handler'
+import {ViewportProvider, useViewport} from 'services/viewport'
 import {AppContext, AppProvider} from 'services/app'
 
 import './App.sass'
 
+import Header from 'Layout/Header'
 import Sidebar from 'Layout/Sidebar'
 import Language from 'Layout/Language'
 import Socials from 'Layout/Socials'
@@ -15,6 +19,9 @@ import Crops from 'App/Crops'
 import Animals from 'App/Animals'
 import Trading from 'App/Trading'
 import Contacts from 'App/Contacts'
+import Preloader from 'Layout/Preloader'
+
+// const Lethargy = require("exports-loader?this.Lethargy!lethargy/lethargy")
 
 const slides = {
   home: <Home/>,
@@ -29,33 +36,50 @@ const slides = {
 
 const App = () => {
   const app = React.useContext(AppContext)
-  const {slide, theme, background} = app.state
+  const {loading, slide, theme, animation, menu} = app.state
+  const {viewport, width, height} = useViewport()
 
   const handleWheel = e => {
-    // if (!app.state.animating) {
-    //   if (e.deltaY > 0) return app.next()
-    //   if (e.deltaY < 0) return app.prev()
-    // }
+    if (!loading && !animation) {
+      if (e.deltaY > 0) return app.next()
+      if (e.deltaY < 0) return app.prev()
+    }
+  }
+
+  const handleSwipeUp = () => {
+    if (!loading && !animation) app.next()
+  }
+
+  const handleSwipeDown = () => {
+    if (!loading && !animation) app.prev()
   }
 
   return <>
-    <div className="background">
-      <video autoPlay muted loop className="video">
-        <source src="/video/background.mp4" type="video/mp4"/>
-      </video>
-    </div>
-    <div className="App" onWheel={handleWheel} style={background ? {background} : null} data-theme={theme}>
-      {slides[slide || 'home']}
-      <Sidebar/>
-      <Language/>
-      <Socials/>
-    </div>
+    {!app.state.loading &&
+      <div className="App" data-theme={theme} data-animation={animation} data-loading={loading} data-menu={menu}
+           style={{'--width': width, '--height': height}}>
+        <Wheel upHandler={app.prev} downHandler={app.next} disableSwipe={true}>
+          <Swipe onSwipeUp={app.next} onSwipeDown={app.prev} tolerance={100}>
+            {slides[slide || 'home']}
+          </Swipe>
+          <Header/>
+          {viewport.includes('ml') && <>
+            <Sidebar/>
+            <Language/>
+            <Socials/>
+          </>}
+        </Wheel>
+      </div>
+    }
+    <Preloader/>
   </>
 }
 
 const Providers = () =>
-  <AppProvider>
-    <App/>
-  </AppProvider>
+  <ViewportProvider>
+    <AppProvider>
+      <App/>
+    </AppProvider>
+  </ViewportProvider>
 
 export default Providers

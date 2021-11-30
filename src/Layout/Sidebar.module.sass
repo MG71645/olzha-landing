@@ -1,4 +1,13 @@
 @import "styles/responsive"
+@import "styles/animation"
+
+@keyframes border
+  0%
+    transform: scaleY(0)
+    opacity: 0
+  100%
+    transform: scaleY(1)
+    opacity: 1
 
 .container
   user-select: none
@@ -9,15 +18,30 @@
   width: var(--sidebar-width)
   display: flex
   flex-direction: column
-  border-right: 1px solid rgba(255,255,255, .3)
   padding-left: d(80)
-  transition: border .25s
+  transition: border var(--animation-duration)
+
+  @include screen(mp)
+    display: none
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    left: 100%
+    bottom: 0
+    width: 1px
+    background: var(--border-color)
+    //transform-origin: top center
+    animation: border 1s ease-in-out .5s backwards
 
 .logo
   cursor: pointer
   width: d(100)
   display: flex
   flex-direction: column
+  --animation-duration: .5s
 
 .menu
   margin-top: d(-13)
@@ -26,36 +50,56 @@
   flex-direction: column
   align-items: flex-start
   font-weight: 500
-  --color: rgba(255,255,255, .7)
-  color: var(--color)
+  color: var(--sidebar-color)
 
 .link
   cursor: pointer
   line-height: .75
-  padding-block: d(13)
-  transition: color .5s
+  padding-top: d(13)
+  padding-bottom: d(13)
   position: relative
-  --activeColor: #4D4A49
+  --animation-duration: .25s
+
+  @for $i from 1 through 10
+    &:nth-child(#{$i})
+      animation-delay: #{$i * .1s + .5s}
+
+  :global(.App)[data-loading="false"] &
+    transition: color var(--animation-duration)
 
   &:before
     content: ''
     display: block
     width: d(25)
     height: 1px
-    background: var(--color)
+    background: var(--sidebar-color)
     position: absolute
     right: 100%
     top: 50%
     margin-right: d(24)
+    transform-origin: right
+
+    :global(.App)[data-loading="false"] &
+      transition: transform ease-in-out, background-color
+      transition-duration: var(--transition-duration)
+
+  @include screen(tp, other)
+    &:hover
+      color: var(--sidebar-active-color)
+
+      &:before
+        background: var(--sidebar-active-color)
 
   &[disabled]
     cursor: default
-    color: var(--activeColor)
+    color: var(--sidebar-active-color)
 
     &:before
-      width: d(60)
-      background: var(--activeColor)
+      transform: scaleX(2.3)
+      background: var(--sidebar-active-color)
 
 .footer
   padding-bottom: var(--footer-padding-bottom)
   font-size: d(10)
+  color: var(--footer-color)
+  --animation-duration: .5s

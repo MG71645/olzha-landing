@@ -9,22 +9,29 @@ const Provider = ({language, children}) => {
   const {slide = ''} = useParams()
 
   const [state, set] = React.useState({
-    language: 'ru',
-    slide: '',
-    animating: false
+    loading: true,
+    language,
+    slide,
+    index: text.slides.findIndex(({link}) => link === slide),
+    animation: null,
+    menu: false
   })
+
+  const overscroll = React.useRef(true)
 
   const update = u => set(s => ({...s, ...u}))
 
   const setLanguage = lg => {
-    if (!state.animating) navigate(`${lg === 'en' ? '/en' : ''}/${slide}`)
+    if (!state.animation) navigate(`${lg === 'en' ? '/en' : ''}/${slide}`)
   }
 
   const goto = path => {
-    if (!state.animating) {
-      update({animating: true})
+    if (overscroll.current) {
+      update({animation: 'in'})
+      overscroll.current = false
       navigate((language === 'ru' ? '' : `/${language}`) + path)
-      setTimeout(() => update({animating: false}), 200)
+      setTimeout(() => overscroll.current = true, 100)
+      setTimeout(() => update({animation: null}), 1500)
     }
   }
 
@@ -42,18 +49,20 @@ const Provider = ({language, children}) => {
     if (index > 0) goto(`/${text.slides[index - 1].link}`)
   }
 
+  const toggleMenu = () => set(s => ({...s, menu: !s.menu}))
+
   React.useEffect(() => {
     update({language})
   }, [language])
 
   React.useEffect(() => {
     const index = text.slides.findIndex(({link}) => link === slide)
-    const {theme, background, color, activeColor, border} = text.slides[index]
-    update({slide, index, theme, background, color, activeColor, border})
+    const {theme, border} = text.slides[index]
+    update({slide, index, theme, border})
   }, [slide])
 
   return (
-    <AppContext.Provider value={{state, setLanguage, setSlide, next, prev}}>
+    <AppContext.Provider value={{state, update, setLanguage, setSlide, next, prev, toggleMenu}}>
       {children}
     </AppContext.Provider>
   )

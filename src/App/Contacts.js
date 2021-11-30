@@ -12,11 +12,11 @@ const Contacts = () => {
   return (
     <div className={`slide`}>
       <div className="header">
-        <div className="h2">{loc(text.title)}</div>
+        <div className="h2" data-animation="fromLeft">{loc(text.title)}</div>
       </div>
       <div className={styles.grid}>
-        {text.contacts.map(({title, body, phone, email}) =>
-          <div className={styles.contact} key={title.ru}>
+        {text.contacts.map(({title, body, phone, email}, i) =>
+          <div className={styles.contact} key={title.ru} data-animation="fromBottom" data-delay={i + 1}>
             <div className={styles.title}>{loc(title)}</div>
             <div dangerouslySetInnerHTML={{__html: loc(body)}}/>
             {loc(text.phone)} <a href={`tel:${phone}`} color="gold">{phone}</a><br/>

@@ -7,3 +7,46 @@
   margin-top: d(53)
   max-width: d(650)
   white-space: pre-wrap
+
+  @include screen(mp)
+    margin-top: mp(30)
+
+.tip
+  user-select: none
+  cursor: default
+  position: fixed
+  bottom: calc(var(--slide-padding-bottom) + #{d(24)})
+  left: 50%
+  transform: translateX(-50%)
+  font-size: d(10)
+  display: flex
+  align-items: center
+
+  @include screen(mp)
+    font-size: mp(12)
+
+.circle
+  width: d(24)
+  height: d(24)
+  border-radius: d(12)
+  border: 1px solid white
+  margin-right: d(9)
+  font-size: d(18)
+  display: flex
+  justify-content: center
+  align-items: center
+
+  @include screen(mp)
+    width: mp(24)
+    height: mp(24)
+    border-radius: mp(12)
+    font-size: mp(14)
+
+@keyframes arrow
+  0%
+    transform: translateY(-15%)
+  100%
+    transform: translateY(-5%)
+
+.icon
+  animation: arrow .5s ease-in-out infinite alternate

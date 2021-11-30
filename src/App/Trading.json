@@ -6,24 +6,44 @@
   "units": {
     "mil": {
       "ru": "млн",
-      "en": "mil"
+      "en": "million"
     },
     "bil": {
       "ru": "млрд",
-      "en": "bil"
+      "en": "billion"
+    },
+    "tons": {
+      "ru": "тонн",
+      "en": "tons"
+    }
+  },
+  "table": {
+    "place": {
+      "ru": "Место",
+      "en": "Place"
+    },
+    "country": {
+      "ru": "Страна",
+      "en": "Country"
+    },
+    "export": {
+      "ru": "Мировой экспорт",
+      "en": "World export"
     }
   },
   "world": {
     "tab": {
-      "ru": "Топ-10 стран-экспортеров пшеницы"
+      "ru": "Топ-10 стран-экспортеров пшеницы",
+      "en": "Top 10 wheat exporting countries"
     },
     "popup": {
       "tons": {
         "ru": "тонн",
-        "en": "ton"
+        "en": "tons"
       },
       "percent": {
-        "ru": "мирового экспорта"
+        "ru": "мирового\nэкспорта",
+        "en": "of world\nexport"
       }
     },
     "countries": [
@@ -79,7 +99,7 @@
         "value": "20,5",
         "percent": "10",
         "top": "34%",
-        "left": "57%",
+        "left": "56%",
         "label": "top"
       },
       {
@@ -122,8 +142,8 @@
         },
         "value": "6,5",
         "percent": "6,5",
-        "top": "37%",
-        "left": "54%",
+        "top": "41%",
+        "left": "57%",
         "label": "bottom"
       },
       {
@@ -141,14 +161,23 @@
   },
   "kazakhstan": {
     "tab": {
-      "ru": "Экспортные направления Олжа Агро"
+      "ru": "Экспортные направления Олжа Агро",
+      "en": "Main export routes of Olzha Agro"
     },
     "body": {
-      "ru": "Олжа Агро Трейд – это трейдинговое подразделение агрохолдинга «Олжа Агро», которое занимается экспортом зерновых и масличных культур. В среднем на Олжа Агро Трейд приходится 5% от всего экспорта зерновых и масличных культур из Казахстана.\n \nОсновные базисы поставки: DAP Сарыагаш, DAP Болашак, DAP Достык, FOB Актау."
+      "ru": [
+        "Олжа Агро Трейд – это трейдинговое подразделение агрохолдинга «Олжа Агро», которое занимается экспортом зерновых и масличных культур. В среднем на Олжа Агро Трейд приходится 5% от всего экспорта зерновых и масличных культур из Казахстана.",
+        "Основные базисы поставки: DAP Сарыагаш, DAP Болашак, DAP Достык, FOB Актау."
+      ],
+      "en": [
+        "The main bases of delivery: DAP Saryagash, DAP Bolashak, DAP Dostyk, FOB Aktau.",
+        "Olzha Agro Trade is a trading division of the Olzha Agro agroholding, which is engaged in exporting of cereals and oilseeds. On average, Olzha AgroTrade accounts for 5% of all exports of cereals and oilseeds from Kazakhstan."
+      ]
     },
     "countries": {
       "title": {
-        "ru": "Экспорт зерновых в год:"
+        "ru": "Экспорт зерновых в год:",
+        "en": "Grain exports a year:"
       },
       "list": [
         {
@@ -157,7 +186,8 @@
             "en": "Uzbekistan"
           },
           "amount": {
-            "ru": "50 000\nтонн"
+            "ru": "50 000\nтонн",
+            "en": "50 000\ntons"
           },
           "height": 5
         },
@@ -167,7 +197,8 @@
             "en": "Tajikistan"
           },
           "amount": {
-            "ru": "33 000\nтонн"
+            "ru": "33 000\nтонн",
+            "en": "33 000\ntons"
           },
           "height": 3
         },
@@ -177,7 +208,8 @@
             "en": "Europe"
           },
           "amount": {
-            "ru": "33 000\nтонн"
+            "ru": "33 000\nтонн",
+            "en": "33 000\ntons"
           },
           "height": 3
         },
@@ -187,7 +219,8 @@
             "en": "Iran"
           },
           "amount": {
-            "ru": "26 000\nтонн"
+            "ru": "26 000\nтонн",
+            "en": "26 000\ntons"
           },
           "height": 2
         },
@@ -197,17 +230,19 @@
             "en": "China"
           },
           "amount": {
-            "ru": "5 000\nтонн"
+            "ru": "5 000\nтонн",
+            "en": "5 000\ntons"
           },
           "height": 1
         },
         {
           "title": {
             "ru": "Внутренний\nрынок",
-            "en": ""
+            "en": "Domestic\nmarket"
           },
           "amount": {
-            "ru": "50 000\nтонн"
+            "ru": "50 000\nтонн",
+            "en": "50 000\ntons"
           },
           "height": 5
         }

@@ -4,8 +4,14 @@
   color: #4D4A49
   --flower-width: calc((100vh - var(--header-height)) * 1956 / 3502 * 1.08)
 
+  img
+    pointer-events: none
+
 .body
   padding-right: calc(var(--flower-width) - var(--slide-padding-right))
+
+  @include screen(mp)
+    padding-right: 0
 
 .values
   display: grid
@@ -13,28 +19,66 @@
   gap: d(38)
   padding-right: d(100)
 
+  @include screen(mp)
+    grid-template-columns: 1fr 1fr
+    row-gap: mp(13)
+
 .value
   display: flex
-  gap: d(18)
   align-items: center
 
 .icon
+  flex-shrink: 0
   width: d(37)
   height: d(37)
-  background: url(/assets/img/icons/value.svg) center / contain no-repeat
+  background: url(/assets/img/Company/value.svg) center / contain no-repeat
+  margin-right: d(18)
+
+  @include screen(mp)
+    width: mp(21)
+    height: mp(21)
+    margin-right: mp(9)
+
+@keyframes sunflower
+  0%
+    transform: scale(.9)
+  100%
+    transform: scale(1)
+
+@keyframes appear
+  0%
+    opacity: 0
+  100%
+    opacity: 1
 
 .sunflower
   position: fixed
   z-index: -1
   width: var(--flower-width)
-  bottom: 0
+  bottom: -8%
   right: 17px
-  transform: translateY(8%)
+  animation: sunflower 1.5s ease-out, appear 1.5s ease-in
+  animation-fill-mode: backwards
+
+  @include screen(mp)
+    display: none
+
+@keyframes barley
+  0%
+    transform: translateY(10%)
+  100%
+    transform: translateY(0)
 
 .barley
   position: fixed
   z-index: -1
-  width: calc(var(--flower-width) * .5)
-  bottom: calc(var(--flower-width) * -.6)
+  width: calc(var(--flower-width) * .6)
+  bottom: calc(var(--flower-width) * -.1)
   right: calc(var(--flower-width) * .55)
-  transform: rotate(-30deg)
+  animation: barley ease-out, appear ease-in
+  animation-duration: 1s
+  animation-fill-mode: backwards
+  animation-delay: .5s
+
+  @include screen(mp)
+    display: none

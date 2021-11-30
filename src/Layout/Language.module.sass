@@ -9,6 +9,14 @@
   display: flex
   align-items: flex-end
 
+  @include screen(mp)
+    height: mp(72)
+    position: absolute
+    top: auto
+    bottom: mp(50)
+    z-index: 101
+    animation: none !important
+
 .box
   cursor: pointer
   width: d(58 - 10)
@@ -22,11 +30,16 @@
   text-transform: uppercase
   font-weight: 500
   color: var(--language-color)
-  transition: background .25s, color .25s
+  transition-property: background, color, border-color
+  transition-duration: var(--transition-duration)
 
-  &:hover
-    background: var(--language-color)
-    color: var(--language-hover-color)
+  @include screen(tp, other)
+    &:hover
+      background: var(--language-color)
+      color: var(--language-hover-color)
+
+  @include screen(mp)
+    border-color: var(--language-border)
 
 .chevron
   display: none

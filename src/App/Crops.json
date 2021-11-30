@@ -1,64 +1,76 @@
 {
   "title": {
-    "ru": "Растениеводство"
+    "ru": "Растениеводство",
+    "en": "Crop production"
   },
   "body": {
-    "ru": "Основное направление деятельности агрохолдинга «Олжа Агро» – это растениеводство. Традиционно выращиваем зерновые и зернобобовые культуры. С каждым годом увеличиваем площадь посева масличных культур. Три года назад мы возродили культуру посева озимых культур в Костанайской области и в следующем году планируем посеять до 100 тыс. га озимых культур."
+    "ru": "Основное направление деятельности агрохолдинга «Олжа Агро» – это растениеводство. Традиционно выращиваем зерновые и зернобобовые культуры. С каждым годом увеличиваем площадь посева масличных культур. Три года назад мы возродили культуру посева озимых культур в Костанайской области и в следующем году планируем посеять до 100 тыс. га озимых культур.",
+    "en": "The main activity of the agroholding Olzha Agro is crop production. Traditionally we grow grain and leguminous crops. Every year we increase the area of sowing oilseeds. Three years ago we revived the culture of sowing winter crops in the Kostanay region and next year we plan to plant 100 thousand hectares of winter crops."
   },
   "list": [
     {
       "title": {
-        "ru": "500 000 гектар"
+        "ru": "500 000 гектар",
+        "en": "500 thousand hectares"
       },
       "subtitle": {
-        "ru": "Общая площадь посева"
+        "ru": "Общая площадь посева",
+        "en": "The area of sowing"
       },
       "list": [
         {
           "title": {
-            "ru": "Пшеница\n(мягкая и твёрдая)"
+            "ru": "Пшеница",
+            "en": "Wheat"
           },
           "image": "wheat.png"
         },
         {
           "title": {
-            "ru": "Ячмень"
+            "ru": "Ячмень",
+            "en": "Barley"
           },
           "image": "barley.png"
         },
         {
           "title": {
-            "ru": "Подсолнечник"
+            "ru": "Подсолнечник",
+            "en": "Sunflower"
           },
           "image": "sunflower.png"
         },
         {
           "title": {
-            "ru": "Кукуруза"
+            "ru": "Кукуруза",
+            "en": "Corn"
           },
           "image": "corn.png"
         },
         {
           "title": {
-            "ru": "Рапс"
+            "ru": "Рапс",
+            "en": "Rapeseed"
           },
           "image": "rapeseed.png"
         },
         {
           "title": {
-            "ru": "Лён"
+            "ru": "Лён",
+            "en": "Flax"
           },
           "image": "flax.png"
         },
         {
           "title": {
-            "ru": "Соя"
+            "ru": "Соя",
+            "en": "Soy"
           },
           "image": "soy.png"
         },
         {
           "title": {
-            "ru": "Чечевица"
+            "ru": "Чечевица",
+            "en": "Lentils"
           },
           "image": "lentils.png"
         }
@@ -66,14 +78,18 @@
     },
     {
       "title": {
-        "ru": "160 000 гектар"
+        "ru": "160 000 гектар",
+        "en": "160 thousand hectares"
       },
       "subtitle": {
-        "ru": "Общая площадь паров"
+        "ru": "Общая площадь паров",
+        "en": "The area of steam"
       },
       "body": {
-        "ru": "«Олжа Агро» применяет в производстве четырёхпольный севооборот. Для повышения урожайности и улучшения состояния почвы холдинг ежегодно парует до 100-160 тысяч гектар с внесением твёрдых и жидких удобрений."
-      }
+        "ru": "«Олжа Агро» применяет в производстве четырёхпольный севооборот. Для повышения урожайности и улучшения состояния почвы холдинг ежегодно парует до 100-160 тысяч гектар с внесением твёрдых и жидких удобрений.",
+        "en": "Olzha Agro uses a four-field crop rotation in production. The holding annually pairs up to 100-160 thousand hectares with the introduction of solid and liquid fertilizers to increase yields and improve soil conditions."
+      },
+      "image": true
     }
   ]
 }

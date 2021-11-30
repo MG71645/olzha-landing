@@ -1,47 +1,87 @@
 @import "styles/responsive"
+@import "styles/animation"
+
+@keyframes appear
+  0%
+    opacity: 0
+  100%
+    opacity: 1
 
 .container
   color: #4D4A49
-  --tabs-height: calc(1.4rem + #{d(8 * 2)})
-  --tabs-margin-bottom: #{d(28)}
   padding-bottom: 0
 
+  img
+    pointer-events: none
+
 .tabs
-  margin-top: d(-12)
-  display: flex
+  display: grid
+  grid-auto-flow: column
   font-weight: 500
   user-select: none
-  gap: d(8)
-  //margin-bottom: d(28)
-  margin-left: d(16)
+  gap: d(20)
+  margin-left: d(20)
+
+  @include screen(mp)
+    display: none
 
 .tab
   cursor: pointer
-  padding: d(8) d(15)
-  border-top-left-radius: d(10)
-  border-bottom-right-radius: d(10)
-  padding-block: d(7)
-  font-size: d(13)
+  position: relative
   transition: background .25s, color .25s
 
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    border-bottom: 1px dotted transparent
+    transition: border-color .25s
+
   &:not([disabled])
-    box-shadow: 0 0 0 1px #E2C275 inset
     color: #D6B360
+    //text-decoration: underline
+    //text-decoration-style: dashed
+    //text-underline-offset: d(4)
+
+    &:after
+      border-color: #D6B360
 
   &[disabled]
     cursor: default
-    background: #E2C275
-    color: white
+    color: #4D4A49
 
-  &:hover
-    background: #E2C275
-    color: white
+.mobileHeader
+  font-weight: 500
+  margin-bottom: mp(8)
+
+  @include screen(ml, other)
+    display: none
+
+@keyframes map
+  0%
+    transform: scale(.9)
+  100%
+    transform: scale(1)
+
+@keyframes ignorePointer
+  0%
+    pointer-events: none
+  99%
+    pointer-events: none
+  100%
+    pointer-events: initial
 
 .map
-  width: 116%
-  max-width: calc((100vh - (var(--header-height) + var(--header-margin-bottom) + var(--tabs-height) + var(--tabs-margin-bottom))) * 1.78)
-  //transform: translateX(-8%)
+  width: 108%
+  max-width: calc((100vh - (var(--header-height) + var(--header-margin-bottom) + var(--slide-padding-bottom))) * 1.78)
   position: relative
+  animation-name: map, appear, ignorePointer
+  animation-duration: 2.5s, 1s, 2s
+  animation-timing-function: ease-out, ease-in
+  animation-fill-mode: backwards
 
 .marker
   cursor: pointer
@@ -54,25 +94,35 @@
   display: flex
   justify-content: center
   align-items: center
-  transform: translate(-50%, -50%)
+  margin-top: d(-12.5)
+  margin-left: d(-12.5)
   box-sizing: content-box
   background-clip: content-box
-  box-shadow: 0 0 0 d(9) rgba(255,255,255, .4)
+  border: d(9) solid rgba(255,255,255, .4)
+
+  @for $i from 2 through 11
+    &:nth-child(#{$i})
+      animation-delay: .15s * $i - .15s
+
+      .label
+        animation-delay: .15s * $i
 
   &:hover
     z-index: 1
 
-  &:not(:hover) .popup
-    display: none
+  &:hover .popup
+    transition-delay: .25s
+    --map-popup-transform: var(--map-popup-transform) scale(1)
 
 .label
   position: absolute
   font-weight: 400
-  white-space: pre-wrap
+  white-space: pre
+  animation: appear .5s ease-in backwards
 
   &:not([data-position])
     left: 100%
-    margin-left: d(9 + 4)
+    margin-left: d(4 + 9)
 
   &[data-position="top"]
     left: 50%
@@ -96,7 +146,7 @@
 
   &[data-position="left"]
     right: 100%
-    margin-right: d(9 + 4)
+    margin-right: d(4 + 9)
     text-align: right
 
 .popup
@@ -105,19 +155,27 @@
   top: 100%
   left: 100%
   padding: d(28)
-  display: flex
+  display: grid
+  grid-auto-flow: column
   gap: d(25)
   border-top-right-radius: d(40)
   border-bottom-left-radius: d(40)
   box-shadow: d(8) d(8) d(20) rgba(226, 194, 117, .4)
+  white-space: pre
+  transform-origin: var(--map-popup-y, top) var(--map-popup-x, left)
+  --map-popup-transform: scale(0)
+  transform: var(--map-popup-transform)
+  transition: transform .25s ease-in-out
 
   &[data-position~="top"]
     top: auto
     bottom: 100%
+    --map-popup-y: bottom
 
   &[data-position~="left"]
     left: auto
     right: 100%
+    --map-popup-x: right
 
   &[data-position~="right"], &[data-position~="bottom"]
     border-radius: d(40) 0 d(40) 0
@@ -133,12 +191,60 @@
 .title
   font-weight: 500
 
+  @include screen(tp, other)
+    margin-top: d(32)
+
+  @include screen(mp)
+    margin-top: mp(24)
+
+@keyframes ground
+  0%
+    transform: scaleX(0)
+    opacity: 0
+  100%
+    transform: scaleX(1)
+    opacity: 1
+
 .countries
+  margin-top: d(100)
   width: fit-content
-  display: flex
+  display: grid
+  grid-auto-flow: column
   gap: d(5)
   align-items: flex-end
-  border-bottom: 1px solid #E2C275
+  position: relative
+
+  &:after
+    content: ''
+    display: block
+    width: 100%
+    height: 1px
+    background: #D6B360
+    position: absolute
+    transform-origin: left center
+    animation: ground 2s ease-out backwards .25s
+
+.slider
+  height: mp(160)
+  user-select: none
+  overflow: visible
+
+  &:after
+    content: ''
+    display: block
+    height: 1px
+    background: #D6B360
+    position: absolute
+    left: calc(var(--slide-padding-left) * -1)
+    right: calc(var(--slide-padding-right) * -1)
+    transform-origin: left center
+    animation: ground 1s ease-out backwards .25s
+
+.slide
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  align-items: center
 
 .country
   display: flex
@@ -147,11 +253,24 @@
   text-align: center
   position: relative
 
+  @include screen(ml, other)
+    width: d(135)
+
+  @include screen(mp)
+    margin-top: mp(100)
+
 .name
   position: absolute
   top: 100%
   margin-top: d(31)
   white-space: pre
+  animation: appear 1s ease-in backwards
+
+@keyframes amount
+  0%
+    bottom: 0
+  100%
+    bottom: 100%
 
 .amount
   width: d(135)
@@ -161,8 +280,10 @@
   background: white
   line-height: d(18)
   font-weight: 500
-  margin-bottom: d(20)
-  position: relative
+  margin-bottom: d(40)
+  position: absolute
+  bottom: 100%
+  animation: amount 1s ease-in-out backwards, popup 1s ease-in-out backwards
 
   &:after
     content: ''
@@ -175,26 +296,8 @@
     left: calc(50% - #{d(6)})
     transform: rotate(45deg)
 
-@keyframes trunk
-  0%
-    transform: scaleY(0)
-  100%
-    transform: scaleY(1)
-
 .seeds
   position: relative
-
-  &:before
-    content: ''
-    display: block
-    width: 1px
-    background: #E2C275
-    position: absolute
-    top: 0
-    left: d(20)
-    bottom: d(-15)
-    transform-origin: bottom center
-    //animation: trunk 1s ease-in-out backwards
 
   &:after
     content: ''
@@ -208,6 +311,22 @@
     margin-top: d(15)
     left: d(18)
 
+@keyframes trunk
+  0%
+    transform: scaleY(0)
+  100%
+    transform: scaleY(1)
+
+.trunk
+  width: 1px
+  background: #E2C275
+  position: absolute
+  top: 0
+  left: d(20)
+  bottom: d(-15)
+  transform-origin: bottom center
+  animation: trunk 1s ease-in-out backwards
+
 @keyframes pairs
   0%
     transform: translateY(100%)
@@ -217,17 +336,20 @@
 .pairs
   display: grid
   padding-bottom: d(12)
-  //animation: pairs 1s ease-in-out backwards
+  animation: pairs 1s ease-in-out backwards
 
 .pair
-  display: flex
+  display: grid
+  grid-template-columns: 1fr 1fr
   gap: d(5)
 
 @keyframes seed
   0%
-    transform: translate(10%, #{d(4)}) rotate(45deg) scale(0)
+    transform: translateX(-50%) rotate(45deg) scale(0)
+    bottom: 0
   100%
-    transform: translate(10%, #{d(4)}) rotate(45deg) scale(1)
+    transform: translateX(-50%) rotate(45deg) scale(1)
+    bottom: 100%
 
 @keyframes seedLeft
   0%
@@ -247,14 +369,48 @@
   border-top-right-radius: 80%
   border-bottom-left-radius: 80%
   background: #E2C275
-  //animation: seedLeft 1s ease-in-out backwards
+  animation: seedLeft 1s ease-in-out backwards
   transform-origin: right bottom
 
   &.top
-    transform: translate(10%, #{d(4)}) rotate(45deg)
-    //animation-name: seed
+    position: absolute
+    bottom: 100%
+    left: 50%
+    transform-origin: center center
+    transform: translateX(-50%) rotate(45deg)
+    animation-name: seed
 
   + .seed
     transform-origin: left bottom
     transform: translateY(-100%) rotate(90deg)
-    //animation-name: seedRight
+    animation-name: seedRight
+
+.table
+  transform: translate3d(0,0,0)
+  width: 100%
+
+.tbody
+  font-weight: 500
+
+.th, .td
+  height: mp(40)
+  border: 1px solid #E2C275
+
+.th
+  font-size: mp(10)
+  text-align: center
+  background: #FFF1CF
+
+  &:first-letter
+    text-transform: uppercase
+
+.td
+  padding: 0 mp(10)
+
+  &:first-child
+    width: mp(41)
+    text-align: center
+
+  &:nth-child(n + 3)
+    width: mp(71)
+    text-align: center

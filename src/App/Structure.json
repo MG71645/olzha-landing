@@ -1,69 +1,84 @@
 {
   "title": {
-    "ru": "Структура Холдинга"
+    "ru": "Структура Холдинга",
+    "en": "Holding Structure"
   },
   "list": [
     {
       "title": {
-        "ru": "Сельхозпредприятия"
+        "ru": "Сельхозпредприятия",
+        "en": "Agricultural enterprises"
       },
       "image": "selhoz.jpg",
       "body": {
-        "ru": "В агрохолдинг «Олжа Агро» входит 25 фермерских хозяйств, разделённых на 5 регионов, находящихся в Костанайской области, занимающихся производством зерновых, масличных, кормовых и других культур.\nТакже в каждом сельхозпредприятии имеется животноводство мясного либо молочного направления."
+        "ru": "В агрохолдинг «Олжа Агро» входит 25 фермерских хозяйств, разделённых на 5 регионов, находящихся в Костанайской области, занимающихся производством зерновых, масличных, кормовых и других культур.\n\nТакже в каждом сельхозпредприятии имеется животноводство мясного либо молочного направления.",
+        "en": "A large agro-industrial holding in Kazakhstan is a complex of manufacturing and processing companies.\n\nWe are engaged not only in crop production, meat and dairy farming, storage, and export of cereals and oilseeds, processing of agricultural products, but also in the production of agricultural machinery."
       }
     },
     {
       "title": {
-        "ru": "Элеваторы"
+        "ru": "Элеваторы",
+        "en": "Elevators"
       },
       "image": "elevators.jpg",
       "body": {
-        "ru": "В состав холдинга входят 9 элеваторов, находящихся в Костанайской области, общей ёмкостью хранения 1,5 млн тонн зерна. Элеваторы принимают зерновые и масличные культуры. Лаборатории оснащены современным оборудованием, которое ежегодно сертифицируется."
+        "ru": "В состав холдинга входят 9 элеваторов, находящихся в Костанайской области, общей ёмкостью хранения 1,5 млн тонн зерна. Элеваторы принимают зерновые и масличные культуры. Лаборатории оснащены современным оборудованием, которое ежегодно сертифицируется.",
+        "en": "The holding includes 9 elevators located in the Kostanay region with a total storage capacity of 1.5 million tons of grain. Elevators accept grain and oilseeds. The laboratories are equipped with modern equipment, which is certified annually."
       }
     },
     {
       "title": {
-        "ru": "Переработка"
+        "ru": "Переработка",
+        "en": "Recycling"
       },
       "image": "pererabotka.jpg",
       "body": {
-        "ru": "Мельничный комплекс с оборудованием турецкого производства, расположенный в городе Костанай, позволяет перерабатывать до 300 тонн зерна в сутки. Производимая продукция – мука – имеет активный спрос на рынке Центральноазиатских стран."
+        "ru": "Мельничный комплекс с оборудованием турецкого производства, расположенный в городе Костанай, позволяет перерабатывать до 300 тонн зерна в сутки. Производимая продукция – мука – имеет активный спрос на рынке Центральноазиатских стран.",
+        "en": "The mill complex with Turkish-made equipment, located in the Kostanay city, allows processing up to 300 tons of grain per day. The manufactured products - flour - have an active demand in the market of Central Asian countries."
       }
     },
     {
       "title": {
-        "ru": "КАМЗ"
+        "ru": "КАМЗ",
+        "en": "KAMF"
       },
       "image": "kamz.jpg",
       "body": {
-        "ru": "Костанайский агромеханический завод (КАМЗ) — крупный завод по производству сельскохозяйственных орудий и агрегатов. Завод имеет конструкторское бюро, лабораторию, литейный участок, участок плазменной резки, всё необходимое технологическое оборудование (станочный парк – более 800 ед.).\n\nРазрабатываемые на заводе новые агрегаты и машины проходят испытания, в первую очередь, на полях агрохолдинга «Олжа Агро» и с успехом внедряются в производство."
+        "ru": "Костанайский агромеханический завод (КАМЗ) — крупный завод по производству сельскохозяйственных орудий и агрегатов. Завод имеет конструкторское бюро, лабораторию, литейный участок, участок плазменной резки, всё необходимое технологическое оборудование (станочный парк – более 800 ед.).\n\nРазрабатываемые на заводе новые агрегаты и машины проходят испытания, в первую очередь, на полях агрохолдинга «Олжа Агро» и с успехом внедряются в производство.",
+        "en": "Kostanay Agro-Mechanical Factory (KAMF) is a large factory for the production of agricultural implements and aggregates. The factory has a design bureau, a laboratory, a foundry site, a plasma cutting site, all the necessary technological equipment (machine park - more than 800 units).\n\nFirst of all, the new units and machines being developed at the factory have to be tested in the fields of the Olzha Agro agricultural holding. Then, after successful testing, they are successfully introduced into production."
       }
     },
     {
       "title": {
-        "ru": "Олжа Промбаза"
+        "ru": "Олжа Промбаза",
+        "en": "Olzha Prombaza"
       },
       "image": "prombaza.jpg",
       "body": {
-        "ru": "База по ремонту транспортных средств, как легковых, так и грузовых. Предприятие также имеет собственный парк грузовых автомашин для перевозки сельскохозяйственной продукции, сыпучих грузов, а также горюче-смазочных материалов."
+        "ru": "База по ремонту транспортных средств, как легковых, так и грузовых. Предприятие также имеет собственный парк грузовых автомашин для перевозки сельскохозяйственной продукции, сыпучих грузов, а также горюче-смазочных материалов.",
+        "en": "The base for the repair of vehicles, both passenger and cargo. The company also has its fleet of trucks for the transportation of agricultural products, bulk cargo, as well as fuel and lubricants."
       }
     },
     {
       "title": {
-        "ru": "Олжа Агро Трейд"
+        "ru": "Олжа Агро Трейд",
+        "en": "Olzha Agro Trade"
       },
       "image": "trade.jpg",
       "body": {
-        "ru": "Трейдинговая компания холдинга, занимающаяся экспортом зерновых и масличных культур. Олжа Агро Трейд экспортирует продукцию в страны Центральной Азии (Узбекистан, Таджикистан, Афганистан), Иран, Россию, Китай, а также Европейские страны."
+        "ru": "Трейдинговая компания холдинга, занимающаяся экспортом зерновых и масличных культур. Олжа Агро Трейд экспортирует продукцию в страны Центральной Азии (Узбекистан, Таджикистан, Афганистан), Иран, Россию, Китай, а также Европейские страны.",
+        "en": "A trading company of the holding, engaged in the export of cereals and oilseeds. Olzha Agro Trade exports products to Central Asian countries (Uzbekistan, Tajikistan, Afghanistan), Iran, Russia, China, including European countries."
       }
     },
     {
       "title": {
-        "ru": "Олжа Продукт"
+        "ru": "Олжа Продукт",
+        "en": "Olzha Product"
       },
       "image": "product.jpg",
       "body": {
-        "ru": "Торговая компания, занимающаяся оптово-розничной продажей молочной продукции холдинга (сыры, молоко, кефир, масло, творог), а также мяса и овощей. Компания реализует продукцию на территории Костанайской области, в городе Нур-Султан, а также в России."
+        "ru": "Торговая компания, занимающаяся оптово-розничной продажей молочной продукции холдинга (сыры, молоко, кефир, масло, творог), а также мяса и овощей. Компания реализует продукцию на территории Костанайской области, в городе Нур-Султан, а также в России.",
+        "en": "A trading company engaged in the wholesale and retail sale of dairy products of the holding (cheeses, milk, kefir, butter, cottage cheese), meat, and vegetables. The company sells productions on the territory of the Kostanay region, in the Nur-Sultan city, including Russia."
       }
     }
   ]

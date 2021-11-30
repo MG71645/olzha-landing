@@ -3,27 +3,48 @@
     "ru": "О компании",
     "en": "About company"
   },
-  "body": {
-    "ru": "<div class='h3' clip='top'>Миссия</div><div>С заботой о земле, с заботой о людях мы стремимся к производству высококачественной продукции, соответствующей мировым стандартам, через раскрытие потенциала нашей земли и наших людей, внедрение культуры земледелия, применение новейших технологий агрономии и животноводства, возрождение престижа cельскохозяйственного работника.</div><br/><br/><div class='h3'>Видение</div><div>Возрождение села. Село – лучшее место для жизни и работы.</div>"
+  "mission": {
+    "title": {
+      "ru": "Миссия",
+      "en": "Mission"
+    },
+    "body": {
+      "ru": "С заботой о земле, с заботой о людях мы стремимся к производству высококачественной продукции, соответствующей мировым стандартам, через раскрытие потенциала нашей земли и наших людей, внедрение культуры земледелия, применение новейших технологий агрономии и животноводства, возрождение престижа cельскохозяйственного работника.",
+      "en": "With care for land, with care for people, we strive to produce high quality products that meet world standards through unlocking the potential of our land and our people, introducing the culture of farming, applying the latest technologies of agronomy and animal husbandry, reviving the prestige of agricultural workers."
+    }
+  },
+  "vision": {
+    "title": {
+      "ru": "Видение",
+      "en": "Vision"
+    },
+    "body": {
+      "ru": "Возрождение села. Село – лучшее место для жизни и работы.",
+      "en": "Revival of rural areas. Countryside is the best place for life and work"
+    }
   },
   "values": {
     "title": {
-      "ru": "Ценности"
+      "ru": "Ценности",
+      "en": "Values"
     },
     "list": [
       {
         "title": {
-          "ru": "Инновационность"
+          "ru": "Инновационность",
+          "en": "Innovation"
         }
       },
       {
         "title": {
-          "ru": "Бережливость"
+          "ru": "Бережливость",
+          "en": "Prudence"
         }
       },
       {
         "title": {
-          "ru": "Прозрачность"
+          "ru": "Прозрачность",
+          "en": "Transparency"
         }
       }
     ]

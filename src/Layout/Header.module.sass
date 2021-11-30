@@ -1,0 +1,81 @@
+@import "styles/responsive"
+
+@keyframes appear
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+.background
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: #482c00EE
+  animation: appear var(--animation-duration) ease-in forwards
+
+  @include screen(ml, other)
+    display: none
+
+.container
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  padding: mp(24) var(--slide-padding-left)
+
+  @include screen(ml, other)
+    display: none
+
+  &[data-menu="true"]
+    --language-color: white
+    --language-border: #E2C275
+
+.logo
+  position: relative
+  z-index: 101
+  width: mp(72)
+
+.toggler
+  position: absolute
+  top: mp(44)
+  right: var(--slide-padding-right)
+  z-index: 101
+  width: mp(41)
+  height: mp(34)
+  border-radius: mp(10) 0 mp(10) 0
+  border: 1px solid var(--language-border)
+  color: var(--language-color)
+  font-size: mp(20)
+  display: flex
+  justify-content: center
+  align-items: center
+
+.menu
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 100
+  display: flex
+  flex-direction: column
+  justify-content: center
+  font-size: mp(16)
+  animation: appear var(--animation-duration) ease-in
+
+.link
+  padding: mp(8) var(--slide-padding-left)
+  font-weight: 500
+  --animation-gap: .1s
+
+  &[disabled]
+    color: #E2C275
+
+.copyright
+  position: absolute
+  left: var(--slide-padding-right)
+  bottom: mp(20)
+  font-size: mp(10)
+  color: #E2C275

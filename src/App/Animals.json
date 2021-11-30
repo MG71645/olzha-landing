@@ -1,37 +1,46 @@
 {
   "title": {
-    "ru": "Животноводство"
+    "ru": "Животноводство",
+    "en": "Animal husbandry"
   },
   "body": {
-    "ru": "«Олжа Агро» активно занимается животноводством мясного и молочного направления. В двух сельхозпредприятиях имеются молочно-товарные фермы. Остальные хозяйства занимаются разведением КРС мясных пород. Также имеются откормочные площадки."
+    "ru": "«Олжа Агро» активно занимается животноводством мясного и молочного направления. В двух сельхозпредприятиях имеются молочно-товарные фермы. Остальные хозяйства занимаются разведением КРС мясных пород. Также имеются откормочные площадки.",
+    "en": "Olzha Agro is actively engaged in animal husbandry of meat and dairy products. There are dairy farms in two agricultural enterprises. The rest of the farms are engaged in breeding beef cattle. There are also feedlots."
   },
   "blocks": [
     {
       "title": {
-        "ru": "8 600 голов"
+        "ru": "8 600 голов",
+        "en": "8 600 heads"
       },
       "subtitle": {
-        "ru": "Общее поголовье"
+        "ru": "Общее поголовье",
+        "en": "Total livestock"
       },
       "body": {
-        "ru": "В мясном направлении представлены породы Герефорд и Казахская белоголовая, а в молочном – Голштинская порода."
+        "ru": "В мясном направлении представлены породы Герефорд и Казахская белоголовая, а в молочном – Голштинская порода.",
+        "en": "The Hereford and Kazakh White-headed breeds are represented in the meat direction. The Holstein breed is represented in the dairy direction."
       },
       "list": [
         {
           "title": {
-            "ru": "6 600 голов"
+            "ru": "6 600 голов",
+            "en": "6 600 head"
           },
           "body": {
-            "ru": "КРС мясное направление"
+            "ru": "КРС мясное направление",
+            "en": "Beef cattle"
           },
           "image": "bull.png"
         },
         {
           "title": {
-            "ru": "2 000 голов"
+            "ru": "2 000 голов",
+            "en": "2 000 head"
           },
           "body": {
-            "ru": "КРС молочное направление"
+            "ru": "КРС молочное направление",
+            "en": "Dairy cows"
           },
           "image": "cow.png"
         }
@@ -39,43 +48,52 @@
     },
     {
       "title": {
-        "ru": "6 500 000\nлитров в год"
+        "ru": "6 500 000\nлитров в год",
+        "en": "6 500 000\nliters a year"
       },
       "subtitle": {
-        "ru": "Переработка молока"
+        "ru": "Переработка молока",
+        "en": "Dairy products"
       },
       "body": {
-        "ru": "Цех по переработке молока производит:"
+        "ru": "Цех по переработке молока производит:",
+        "en": "The milk processing plant produces:"
       },
       "ul": [
         {
           "title": {
-            "ru": "пакетированное и пастеризованное молоко"
+            "ru": "пакетированное и пастеризованное молоко",
+            "en": "packaged pasteurized milk"
           }
         },
         {
           "title": {
-            "ru": "твёрдые и мягкие сыры"
+            "ru": "твёрдые и мягкие сыры",
+            "en": "hard and soft cheeses"
           }
         },
         {
           "title": {
-            "ru": "творог"
+            "ru": "творог",
+            "en": "cottage cheese"
           }
         },
         {
           "title": {
-            "ru": "кефир"
+            "ru": "кефир",
+            "en": "kefir"
           }
         },
         {
           "title": {
-            "ru": "йогурт"
+            "ru": "йогурт",
+            "en": "yogurt"
           }
         },
         {
           "title": {
-            "ru": "масло"
+            "ru": "масло",
+            "en": "butter"
           }
         }
       ]

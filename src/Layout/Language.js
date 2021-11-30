@@ -19,7 +19,7 @@ const Language = () => {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-animation="fromRight">
       <div className={styles.box} onClick={() => app.setLanguage(links[language].to)}>
         {links[language].text} <span className={styles.chevron}>⌵</span>
       </div>

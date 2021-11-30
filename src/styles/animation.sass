@@ -1,0 +1,92 @@
+@import "responsive"
+
+.App
+  --animation-duration: .5s
+
+@keyframes appear
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+[data-animation="appear"]
+  animation-name: appear
+  animation-timing-function: ease-in
+  animation-duration: var(--animation-duration)
+  animation-fill-mode: backwards
+
+@keyframes fromTop
+  0%
+    transform: translateY(d(-50))
+  100%
+    transform: translateY(0)
+
+[data-animation="fromTop"]
+  animation-name: fromTop, appear
+  animation-timing-function: ease-out, ease-in
+  animation-duration: var(--animation-duration)
+  animation-fill-mode: backwards
+
+@keyframes fromBottom
+  0%
+    transform: translateY(d(50))
+  100%
+    transform: translateY(0)
+
+[data-animation="fromBottom"]
+  animation-name: fromBottom, appear
+  animation-timing-function: ease-out, ease-in
+  animation-duration: var(--animation-duration)
+  animation-fill-mode: backwards
+
+@keyframes fromLeft
+  0%
+    transform: translateX(d(-50))
+  100%
+    transform: translateX(0)
+
+[data-animation="fromLeft"]
+  animation-name: fromLeft, appear
+  animation-timing-function: ease-out, ease-in
+  animation-duration: calc(var(--animation-duration) * 2)
+  animation-fill-mode: backwards
+
+@keyframes fromRight
+  0%
+    transform: translateX(d(50))
+  100%
+    transform: translateX(0)
+
+[data-animation="fromRight"]
+  animation-name: fromRight, appear
+  animation-timing-function: ease-out, ease-in
+  animation-duration: calc(var(--animation-duration) * 2)
+  animation-fill-mode: backwards
+
+@keyframes popup
+  0%
+    transform: scale(0)
+  100%
+    transform: scale(1)
+
+[data-animation="popup"]
+  animation-name: popup
+  animation-timing-function: ease-in-out
+  animation-duration: var(--animation-duration)
+  animation-fill-mode: backwards
+
+@keyframes zoomOut
+  0%
+    transform: scale(10)
+  100%
+    transform: scale(1)
+
+[data-animation="zoomOut"]
+  animation-name: zoomOut, appear
+  animation-timing-function: ease-out, ease-in
+  animation-duration: var(--animation-duration)
+  animation-fill-mode: backwards
+
+@for $i from 1 through 12
+  [data-delay="#{$i}"]
+    animation-delay: calc(#{$i} * var(--animation-gap, .25s))

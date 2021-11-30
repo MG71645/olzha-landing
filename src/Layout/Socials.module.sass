@@ -4,29 +4,43 @@
   position: fixed
   bottom: var(--footer-padding-bottom)
   right: var(--slide-padding-right)
-  display: flex
+  display: grid
+  grid-auto-flow: column
   gap: d(12)
+
+  @include screen(mp)
+    bottom: mp(50)
+    left: var(--slide-padding-left)
+    right: auto
+    gap: mp(18)
+    animation: none !important
 
 .social
   width: d(24)
   height: d(24)
+
+  @include screen(mp)
+    width: mp(28)
+    height: mp(28)
 
 .icon
   width: 100%
   height: 100%
   border-radius: 50%
   border: 1px solid var(--socials-color)
-  transition: background .25s
+  transition: background var(--transition-duration)
 
-  &:hover
-    background: var(--socials-color)
+  @include screen(tp, other)
+    &:hover
+      background: var(--socials-color)
 
-    .path
-      fill: var(--socials-hover-color)
+      .path
+        fill: var(--socials-hover-color)
 
 .circle
+  transition: stroke var(--transition-duration)
   stroke: var(--socials-color)
 
 .path
   fill: var(--socials-color)
-  transition: fill .25s
+  transition: fill var(--transition-duration)

@@ -3,20 +3,41 @@
 .container
   padding-bottom: d(100)
 
-.list
-  display: grid
-  gap: d(50)
-  padding-right: d(134)
+.swiper
+  user-select: none
+  cursor: grab
+  overflow: visible
+  //height: calc(100vh - var(--header-height) - var(--header-margin-bottom))
+  margin-right: d(138)
+
+  @include screen(mp)
+    margin-right: 0
 
 .item
   display: grid
   grid-template-columns: 1fr 1fr
   gap: d(32)
   align-items: flex-start
+  scroll-snap-align: start
+  height: fit-content
 
   &:nth-child(2n) .image
     order: 1
     border-radius: 20% 0 20% 0
+
+    @include screen(mp)
+      border-radius: mp(40) 0 mp(40) 0
+
+  @include screen(ml, other)
+    padding-bottom: d(69)
+
+    &:last-child
+      height: calc(100vh - var(--header-height) - var(--header-margin-bottom))
+      //padding-bottom: d(100)
+
+  @include screen(mp)
+    grid-template-columns: 1fr
+    gap: mp(20)
 
 .image
   flex-shrink: 0
@@ -25,5 +46,59 @@
   border-bottom-left-radius: 20%
   background: #4D4A49 center / cover no-repeat
 
+  @include screen(mp)
+    grid-row: 1
+    border-radius: mp(40) 0 mp(40) 0
+    padding-top: 66%
+
 .body
   white-space: pre-wrap
+
+  @include screen(mp)
+    margin-top: mp(-10)
+    line-height: 1.2
+
+.pagination
+  position: fixed
+  right: var(--slide-padding-right)
+  top: 50%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: d(300)
+  max-height: calc(100vh - 2 * (var(--header-height) + var(--header-margin-bottom)))
+  transform: translateY(-50%)
+
+  @include screen(mp)
+    display: none
+
+.bullet
+  width: d(16)
+  height: d(16)
+  border-radius: 75% 0 75% 0
+  border: 1px solid white
+  position: relative
+  transition: background .25s
+
+  @for $i from 1 through 10
+    &:nth-child(#{$i})
+      animation-delay: calc(var(--animation-duration) + #{$i * .1s})
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    top: d(-16)
+    left: d(-16)
+    right: d(-16)
+    bottom: d(-16)
+
+  &:not([disabled])
+    cursor: pointer
+
+    @include screen(tp, other)
+      &:hover
+        background: #E2C275
+
+  &[disabled]
+    background: #E2C275

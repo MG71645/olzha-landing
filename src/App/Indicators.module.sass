@@ -2,27 +2,55 @@
 
 .container
   font-weight: 500
+  --indicators-radius: #{d(40)}
+
+  @include screen(mp)
+    --indicators-gap: #{mp(12)}
+    --indicators-radius: #{mp(30)}
 
 .indicators
   display: grid
   grid-template-columns: 1fr 1fr
   gap: d(32)
 
+  @include screen(mp)
+    grid-template-columns: 1fr
+    gap: var(--indicators-gap)
+
 .h1
   font-size: d(45)
   line-height: 1
   margin-bottom: d(16)
 
+  @include screen(ml, other)
+    white-space: pre-wrap
+
+  @include screen(mp)
+    font-size: mp(25)
+    margin-bottom: mp(5)
+
 .h2
   font-size: d(30)
   line-height: 1
   margin-bottom: d(10)
+  white-space: pre-wrap
+
+  @include screen(mp)
+    font-size: mp(18)
+    margin-bottom: mp(4)
 
 .area
+  pointer-events: none
   display: flex
-  background: #64C9CF url(/assets/img/farmland.png) bottom -10% center / contain no-repeat
-  border-top-right-radius: 15%
-  border-bottom-left-radius: 15%
+  background: #64C9CF url(/assets/img/Indicators/field.jpg) center / cover no-repeat
+  border-radius: 0 d(80) 0 d(80)
+  position: relative
+  overflow: hidden
+  transform: translate3d(0,0,0)
+
+  @include screen(mp)
+    height: mp(200)
+    border-radius: 0 mp(40) 0 mp(40)
 
   &:before
     content: ''
@@ -30,26 +58,69 @@
     width: 0
     padding-top: 100%
 
-  .layout
-    display: grid
-    grid-template-rows: 1fr 1fr
+.video
+  position: absolute
+  bottom: 50%
+  transform: translateY(50%)
+  left: 0
+  width: 100%
+  border-radius: 0 d(80) 0 d(80)
 
-  .block
-    padding: d(39) d(42) 0
+  @include screen(mp)
+    border-radius: 0 mp(40) 0 mp(40)
+
+.layout
+  position: relative
+  display: grid
+  grid-template-rows: 1fr 1fr
+
+.block
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  @include screen(ml, other)
+    padding: 0 d(42)
+
+  @include screen(mp)
+    &:first-child
+      padding: 0 mp(21)
+      font-size: mp(16)
+
+    &:last-child
+      flex-direction: row
+      align-items: center
+
+.half
+  @include screen(mp)
+    padding: 0 mp(21)
+
+  &:first-child
+    @include screen(ml, other)
+      margin-bottom: d(20)
+
+    @include screen(mp)
+      margin-right: var(--indicators-gap)
 
 .grid
   display: grid
+  grid-template-rows: 1fr 1fr
   grid-template-columns: 1fr 1fr
   gap: d(32)
+
+  @include screen(mp)
+    grid-template-rows: mp(110) mp(110)
+    gap: var(--indicators-gap)
 
 .item
   background: #E2C275
   padding: d(50) d(32) 0 d(27)
 
   &:nth-child(1), &:nth-child(4)
-    border-top-right-radius: 15%
-    border-bottom-left-radius: 15%
+    border-radius: 0 var(--indicators-radius) 0 var(--indicators-radius)
 
   &:nth-child(2), &:nth-child(3)
-    border-top-left-radius: 15%
-    border-bottom-right-radius: 15%
+    border-radius: var(--indicators-radius) 0 var(--indicators-radius) 0
+
+  @include screen(mp)
+    padding: mp(18) mp(21) 0

@@ -1,57 +1,69 @@
 {
   "title": {
-    "ru": "Контакты"
+    "ru": "Контакты",
+    "en": "Contacts"
   },
   "phone": {
-    "ru": "Тел.:"
+    "ru": "Тел.:",
+    "en": "Phone:"
   },
   "contacts": [
     {
       "title": {
-        "ru": "ТОО «Олжа Агро»"
+        "ru": "ТОО «Олжа Агро»",
+        "en": "LLP Olzha Agro"
       },
       "body": {
-        "ru": "г. Костанай, пр. Назарбаева, 170"
+        "ru": "г. Костанай, пр. Назарбаева, 170",
+        "en": "Kostanay, pr. Nazarbayeva, 170"
       },
       "phone": "+7 (714) 290 24 24",
       "email": "info@olzhaagro.kz"
     },
     {
       "title": {
-        "ru": "HR департамент"
+        "ru": "HR-департамент",
+        "en": "HR-department"
       },
       "body": {
-        "ru": "г. Костанай, пр. Назарбаева, 170"
+        "ru": "г. Костанай, пр. Назарбаева, 170",
+        "en": "Kostanay, pr. Nazarbayeva, 170"
       },
       "phone": "+7 (714) 290 24 40",
       "email": "hr@olzhaagro.kz"
     },
     {
       "title": {
-        "ru": "Пресс служба"
+        "ru": "Пресс-служба",
+        "en": "Press Centre"
       },
       "body": {
-        "ru": "г. Костанай, пр. Назарбаева, 170"
+        "ru": "г. Костанай, пр. Назарбаева, 170",
+        "en": "Kostanay, pr. Nazarbayeva, 170"
       },
       "phone": "+7 (714) 290 24 57",
       "email": "press@olzhaagro.kz"
     },
     {
       "title": {
-        "ru": "ТОО «Олжа Агро Трейд»"
+        "ru": "ТОО «Олжа Агро Трейд»",
+        "en": "LLP Olzha Agro Trade"
       },
       "body": {
-        "ru": "г. Алматы, пр. Аль-Фараби, 17/1, корпус 5Б, офис 14"
+        "ru": "г. Алматы, пр. Аль-Фараби, 17/1, корпус 5Б, офис 14",
+        "en": "Almaty, pr. Al-Farabi, 17/1, block 5B, office 14"
       },
       "phone": "+7 (727) 311 51 35",
       "email": "office@olzhaholding.com"
     },
     {
       "title": {
-        "ru": "ТОО «Olzha Produkt»"
+        "ru": "ТОО «Olzha Produkt»",
+        "en": "LLP Olzha Produkt"
       },
       "body": {
-        "ru": "г. Костанай, ул. Аль-Фараби, 65, офис 909"
+        "ru": "г. Костанай, ул. Аль-Фараби, 65, офис 909",
+        "en": "Kostanay, ul. Al-Farabi, 65, office 909"
       },
       "phone": "+7 (714) 236 06 16"
     }

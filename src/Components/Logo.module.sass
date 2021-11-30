@@ -3,9 +3,13 @@
 .svg
   width: 100%
 
-  &[data-slide=""]
+  &[data-slide=""], &[data-menu="true"]
     .horse
-      fill: none
+      fill: transparent
 
     .olzha, .agro
       fill: white
+
+:global(.App)[data-loading="false"]
+  .horse, .olzha, .agro
+    transition: fill 1s

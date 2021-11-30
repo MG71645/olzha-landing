@@ -1,9 +1,20 @@
 @import "styles/responsive"
+@import "styles/animation"
+
+#detach-button-host
+  display: none
 
 html
-  background: #4D4A49
+  background: #E2C275
   font-size: 100vw / 1366 * 14
   line-height: 1.4
+  overscroll-behavior: none
+
+  @include screen(mp)
+    font-size: mp(12)
+
+  @media (min-aspect-ratio: 2/1)
+    font-size: 2vh
 
 .App
   position: fixed
@@ -14,7 +25,9 @@ html
   font-family: Gotham, sans-serif
   -webkit-font-smoothing: antialiased
   color: white
-  transition: background .5s
+  background: var(--background, rgba(100, 50, 0, .25))
+  transition: background var(--animation-duration)
+  --transition-duration: .25s
   --header-height: #{d(110)}
   --header-margin-bottom: #{d(50)}
   --sidebar-width: #{d(286)}
@@ -24,29 +37,123 @@ html
   --footer-padding-bottom: #{d(32)}
   --h2-font-size: #{d(35)}
   --h2-margin-bottom: calc(#{d(64)} - .2em)
+  --sidebar-color: rgba(255,255,255, .7)
+  --sidebar-active-color: #E2C275
+  --footer-color: white
   --language-color: white
+  --language-border: #e2c275
   --language-hover-color: #be9959
   --socials-color: white
   --socials-hover-color: #be9959
+  --border-color: rgba(255,255,255, .3)
 
-  &[data-theme="light"]
-    --language-color: #D6B360
-    --language-hover-color: #FDF4DE
-    --socials-color: #D6B360
-    --socials-hover-color: #FDF4DE
+  @media (min-aspect-ratio: 2/1)
+    --content-height: calc(68vh)
+    --slide-padding-left: calc(50vw - var(--content-height) - var(--sidebar-width) / 2)
+    --slide-padding-right: calc(50vw - var(--content-height) - var(--sidebar-width) / 2)
+
+  @include screen(mp)
+    --header-margin-bottom: #{mp(38)}
+    --slide-padding-top: #{mp(36)}
+    --slide-padding-left: #{mp(29)}
+    --slide-padding-right: #{mp(29)}
+    --footer-padding-bottom: #{mp(25)}
+
+  &[data-loading="true"]
+    transition: none
 
   &[data-theme="gold"]
-    --socials-hover-color: #D6B360
+    --background: #E2C275
+    --sidebar-active-color: #4D4A49
+    --language-border: white
+
+    @include screen(tp, other)
+      --socials-hover-color: #D6B360
 
   &[data-theme="green"]
+    --background: #93B458
+    --sidebar-active-color: #4D4A49
     --language-hover-color: #93B458
-    --socials-hover-color: #93B458
+    --language-border: white
+
+    @include screen(tp, other)
+      --socials-hover-color: #93B458
+
+  &[data-theme="light"]
+    --background: #FDF4DE
+    --sidebar-color: #B7B0A1
+    --sidebar-active-color: #4D4A49
+    --footer-color: #B7B0A1
+    --language-color: #D6B360
+    --language-hover-color: #FDF4DE
+    --border-color: rgba(212,212,212, .7)
+
+    @include screen(tp, other)
+      --socials-color: #D6B360
+      --socials-hover-color: #FDF4DE
+
+  &[data-animation="out"]
+    .slide
+      opacity: 0
+
+  &[data-animation="in"]
+    --transition-duration: 1s
 
 [color="gray"]
   color: #4D4A49
 
 [color="gold"]
   color: #D6B360
+
+.h1
+  margin-left: -.085em
+  font-size: d(100)
+  line-height: .75
+  font-weight: 500
+
+  @include screen(mp)
+    font-size: mp(45)
+
+.h2
+  margin-left: -.085em
+  font-size: var(--h2-font-size)
+  font-weight: 500
+  color: #4D4A49
+  margin-bottom: -.35em
+
+  @include screen(mp)
+    font-size: mp(25)
+
+.h3
+  font-size: d(25)
+  font-weight: 500
+  margin-bottom: d(20)
+
+  @include screen(mp)
+    font-size: mp(16)
+    margin-bottom: mp(17)
+
+.p
+  margin-bottom: 1em
+
+[clip~="top"]
+  margin-top: -.35em
+
+[clip~="bottom"]
+  margin-bottom: -.35em
+
+.hr
+  margin-block: d(8)
+  height: 1px
+  background: rgba(255,255,255, .3)
+
+@keyframes stickyHeader
+  0%
+    background: transparent
+    box-shadow: none
+  100%
+    background: var(--background)
+    box-shadow: 0 d(16) d(16) d(16) var(--background)
 
 .header
   flex-shrink: 0
@@ -56,6 +163,17 @@ html
   margin-bottom: var(--header-margin-bottom)
   padding-right: d(80)
 
+  @include screen(ml, other)
+    &.-sticky
+      position: sticky
+      top: 0
+      z-index: 10
+      animation: stickyHeader 1s ease-in forwards
+
+  @include screen(mp)
+    height: mp(130)
+    padding-right: 0
+
 .background
   position: fixed
   top: 0
@@ -63,15 +181,27 @@ html
   bottom: 0
   right: 0
   overflow: hidden
-  //background: url(/assets/img/background.jpg) center / cover no-repeat
+  background: url(assets/img/background.jpg) center / cover no-repeat
+  animation: appear var(--animation-duration) linear
+
+  @include screen(mp)
+    background-position: center left 75%
+
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(100,50,0, .25)
 
 .video
   position: absolute
-  //top: 50%
-  top: 0
+  top: 50%
   left: 0
   width: 100%
-  //transform: translateY(-50%)
+  transform: translateY(-50%)
 
   @media (max-aspect-ratio: 16/9)
     top: 0
@@ -80,31 +210,8 @@ html
     height: 100%
     transform: translateX(-50%)
 
-.h1
-  margin-left: -.085em
-  font-size: d(100)
-  line-height: .75
-  font-weight: 500
-
-.h2
-  margin-left: -.085em
-  font-size: var(--h2-font-size)
-  font-weight: 500
-  color: #4D4A49
-  margin-bottom: -.35em
-
-.h3
-  font-size: d(25)
-  font-weight: 500
-  margin-bottom: d(20)
-
-[clip~="top"]
-  margin-top: -.35em
-
-.hr
-  margin-block: d(8)
-  height: 1px
-  background: rgba(255,255,255, .3)
+  @include screen(mp)
+    left: 0
 
 .slide
   position: fixed
@@ -115,4 +222,8 @@ html
   padding-left: calc(var(--sidebar-width) + var(--slide-padding-left))
   padding-bottom: var(--slide-padding-bottom)
   padding-right: var(--slide-padding-right)
-  overflow-y: auto
+  overflow: hidden
+  transition: transform .5s ease-in-out, opacity .5s
+
+  @include screen(mp)
+    padding-left: var(--slide-padding-left)
