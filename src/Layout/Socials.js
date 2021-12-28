@@ -12,7 +12,7 @@ const Socials = () => {
       <a className={styles.social} href="https://youtube.com/channel/UCCH7rkJajUZmcDTLdWA2CqA" target="_blank" rel="noreferrer">
         <Youtube/>
       </a>
-      <a className={styles.social} href="https://instagram.com/olzhaagro?utm_medium=copy_link" target="_blank" rel="noreferrer">
+      <a className={styles.social} href="https://instagram.com/olzhaagro" target="_blank" rel="noreferrer">
         <Instagram/>
       </a>
       <a className={styles.social} href="https://t.me/akhojanazarov" target="_blank" rel="noreferrer">

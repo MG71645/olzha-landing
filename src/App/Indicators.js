@@ -1,6 +1,4 @@
 import React from 'react'
-import {hyphenated} from 'hyphenated'
-import ru from 'hyphenated-ru'
 import {AppContext} from 'services/app'
 
 import text from './Indicators.json'
@@ -13,8 +11,6 @@ const Indicators = () => {
 
   const loc = obj => obj[language] || obj.ru
 
-  const hyphen = obj => language === 'ru' ? hyphenated(obj[language], {language: ru}) : hyphenated(obj[language])
-
   return (
     <div className={`slide ${styles.container}`}>
       <div className="header">
@@ -22,7 +18,7 @@ const Indicators = () => {
       </div>
       <div className={styles.indicators}>
         <div className={styles.area} data-animation="fromBottom" data-delay="1">
-          <video autoPlay muted loop className={styles.video}>
+          <video autoPlay muted loop pip="false" className={styles.video}>
             <source src={video} type="video/mp4"/>
           </video>
           <div className={styles.layout}>

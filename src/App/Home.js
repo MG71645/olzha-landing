@@ -12,7 +12,7 @@ const Home = () => {
 
   return <>
     <div className="background">
-      <video autoPlay muted loop className="video">
+      <video autoPlay muted loop pip="false" className="video">
         <source src={video} type="video/mp4"/>
       </video>
     </div>
