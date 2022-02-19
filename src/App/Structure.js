@@ -45,16 +45,6 @@ const Structure = () => {
     }, 100)
   }
 
-  const handleWheel = e => {
-    if (viewport.includes('ml')) {
-      e.stopPropagation()
-      if (overscroll.current) {
-        if (e.deltaY < 0 && slide.current === 0) app.prev()
-        else if (e.deltaY > 0 && slide.current === text.list.length - 1) app.next()
-      }
-    }
-  }
-
   const handleUp = () => {
     if (overscroll.current && slide.current === 0) app.prev()
   }
@@ -69,12 +59,12 @@ const Structure = () => {
   }
 
   return (<Wheel upHandler={handleUp} downHandler={handleDown}>
-    <div className={`slide ${styles.container}`} onWheel={null} onTouchMove={null}>
+    <div className={`slide ${styles.container}`}>
       <div className="header -sticky" data-sticky={slide.current > 0}>
         <div className="h2" data-animation="fromLeft">{loc(text.title)}</div>
       </div>
       <Swiper className={styles.swiper} modules={[Mousewheel]}
-        slidesPerView={1.1} spaceBetween={32}
+        slidesPerView={1.1} spaceBetween={32} simulateTouch={false}
         breakpoints={{
           568: {
             direction: 'vertical',

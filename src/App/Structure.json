@@ -11,19 +11,19 @@
       },
       "image": "selhoz.jpg",
       "body": {
-        "ru": "В агрохолдинг «Олжа Агро» входит 25 фермерских хозяйств, разделённых на 5 регионов, находящихся в Костанайской области, занимающихся производством зерновых, масличных, кормовых и других культур.\n\nТакже в каждом сельхозпредприятии имеется животноводство мясного либо молочного направления.",
+        "ru": "В агрохолдинг «Олжа Агро» входит 25 фермерских хозяйств в Костанайской области, которые разделены на 5 регионов. Они занимаются производством зерновых, масличных, кормовых и других культур.\n\nТакже в каждом сельхозпредприятии имеется животноводство мясного либо молочного направления.",
         "en": "A large agro-industrial holding in Kazakhstan is a complex of manufacturing and processing companies.\n\nWe are engaged not only in crop production, meat and dairy farming, storage, and export of cereals and oilseeds, processing of agricultural products, but also in the production of agricultural machinery."
       }
     },
     {
       "title": {
         "ru": "Элеваторы",
-        "en": "Elevators"
+        "en": "Grain silos"
       },
       "image": "elevators.jpg",
       "body": {
         "ru": "В состав холдинга входят 9 элеваторов, находящихся в Костанайской области, общей ёмкостью хранения 1,5 млн тонн зерна. Элеваторы принимают зерновые и масличные культуры. Лаборатории оснащены современным оборудованием, которое ежегодно сертифицируется.",
-        "en": "The holding includes 9 elevators located in the Kostanay region with a total storage capacity of 1.5 million tons of grain. Elevators accept grain and oilseeds. The laboratories are equipped with modern equipment, which is certified annually."
+        "en": "The holding includes 9 grain silos located in the Kostanay region with a total storage capacity of 1.5 million tons of grain. Elevators accept grain and oilseeds. The laboratories are equipped with modern equipment, which is certified annually."
       }
     },
     {
@@ -33,7 +33,7 @@
       },
       "image": "pererabotka.jpg",
       "body": {
-        "ru": "Мельничный комплекс с оборудованием турецкого производства, расположенный в городе Костанай, позволяет перерабатывать до 300 тонн зерна в сутки. Производимая продукция – мука – имеет активный спрос на рынке Центральноазиатских стран.",
+        "ru": "Мельничный комплекс с оборудованием турецкого производства, расположенный в Костанае, позволяет перерабатывать до 300 тонн зерна в сутки. Производимая продукция – мука – имеет активный спрос на рынке Центральноазиатских стран.",
         "en": "The mill complex with Turkish-made equipment, located in the Kostanay city, allows processing up to 300 tons of grain per day. The manufactured products - flour - have an active demand in the market of Central Asian countries."
       }
     },
@@ -66,7 +66,7 @@
       },
       "image": "trade.jpg",
       "body": {
-        "ru": "Трейдинговая компания холдинга, занимающаяся экспортом зерновых и масличных культур. Олжа Агро Трейд экспортирует продукцию в страны Центральной Азии (Узбекистан, Таджикистан, Афганистан), Иран, Россию, Китай, а также Европейские страны.",
+        "ru": "Трейдинговая компания холдинга, занимающаяся экспортом зерновых и масличных культур. Олжа Агро Трейд экспортирует продукцию в страны Центральной Азии (Узбекистан, Таджикистан, Афганистан), Иран, Россию, Китай, а также европейские страны.",
         "en": "A trading company of the holding, engaged in the export of cereals and oilseeds. Olzha Agro Trade exports products to Central Asian countries (Uzbekistan, Tajikistan, Afghanistan), Iran, Russia, China, including European countries."
       }
     },
@@ -77,7 +77,7 @@
       },
       "image": "product.jpg",
       "body": {
-        "ru": "Торговая компания, занимающаяся оптово-розничной продажей молочной продукции холдинга (сыры, молоко, кефир, масло, творог), а также мяса и овощей. Компания реализует продукцию на территории Костанайской области, в городе Нур-Султан, а также в России.",
+        "ru": "Торговая компания, занимающаяся оптово-розничной продажей молочной продукции холдинга (сыры, молоко, кефир, масло, творог), а также мяса и овощей. Компания реализует продукцию на территории Костанайской области, в столице страны, а также в России.",
         "en": "A trading company engaged in the wholesale and retail sale of dairy products of the holding (cheeses, milk, kefir, butter, cottage cheese), meat, and vegetables. The company sells productions on the territory of the Kostanay region, in the Nur-Sultan city, including Russia."
       }
     }

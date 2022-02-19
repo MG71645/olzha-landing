@@ -4,13 +4,13 @@
     "en": "Crop production"
   },
   "body": {
-    "ru": "Основное направление деятельности агрохолдинга «Олжа Агро» – это растениеводство. Традиционно выращиваем зерновые и зернобобовые культуры. С каждым годом увеличиваем площадь посева масличных культур. Три года назад мы возродили культуру посева озимых культур в Костанайской области и в следующем году планируем посеять до 100 тыс. га озимых культур.",
+    "ru": "Основное направление деятельности агрохолдинга «Олжа Агро» – это растениеводство. Традиционно выращиваем зерновые и зернобобовые культуры. С каждым годом увеличиваем площадь посева масличных культур. Три года назад мы возродили культуру посева озимых в Костанайской области и в следующем году планируем посеять до 100 тыс. га озимых культур.",
     "en": "The main activity of the agroholding Olzha Agro is crop production. Traditionally we grow grain and leguminous crops. Every year we increase the area of sowing oilseeds. Three years ago we revived the culture of sowing winter crops in the Kostanay region and next year we plan to plant 100 thousand hectares of winter crops."
   },
   "list": [
     {
       "title": {
-        "ru": "500 000 гектар",
+        "ru": "500 000 гектаров",
         "en": "500 thousand hectares"
       },
       "subtitle": {
@@ -78,16 +78,16 @@
     },
     {
       "title": {
-        "ru": "160 000 гектар",
+        "ru": "160 000 гектаров",
         "en": "160 thousand hectares"
       },
       "subtitle": {
         "ru": "Общая площадь паров",
-        "en": "The area of steam"
+        "en": "Fallow area"
       },
       "body": {
-        "ru": "«Олжа Агро» применяет в производстве четырёхпольный севооборот. Для повышения урожайности и улучшения состояния почвы холдинг ежегодно парует до 100-160 тысяч гектар с внесением твёрдых и жидких удобрений.",
-        "en": "Olzha Agro uses a four-field crop rotation in production. The holding annually pairs up to 100-160 thousand hectares with the introduction of solid and liquid fertilizers to increase yields and improve soil conditions."
+        "ru": "«Олжа Агро» применяет в производстве четырёхпольный севооборот. Для повышения урожайности и улучшения состояния почвы холдинг ежегодно парует до 100-160 тысяч гектаров с внесением твёрдых и жидких удобрений.",
+        "en": "Olzha Agro uses a four-field crop rotation in production. The holding annually fallows 100-160 thousand hectares with the introduction of solid and liquid fertilizers to increase yields and improve soil conditions."
       },
       "image": true
     }
