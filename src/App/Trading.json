@@ -182,25 +182,14 @@
       "list": [
         {
           "title": {
-            "ru": "Узбекистан",
-            "en": "Uzbekistan"
+            "ru": "Узбекистан, Таджикистан,\nАфганистан",
+            "en": "Uzbekistan, Tajikistan,\nAfghanistan"
           },
           "amount": {
-            "ru": "50 000\nтонн",
-            "en": "50 000\ntons"
+            "ru": "150 000\nтонн",
+            "en": "150 000\ntons"
           },
           "height": 5
-        },
-        {
-          "title": {
-            "ru": "Таджикистан",
-            "en": "Tajikistan"
-          },
-          "amount": {
-            "ru": "33 000\nтонн",
-            "en": "33 000\ntons"
-          },
-          "height": 3
         },
         {
           "title": {
@@ -208,8 +197,8 @@
             "en": "Europe"
           },
           "amount": {
-            "ru": "33 000\nтонн",
-            "en": "33 000\ntons"
+            "ru": "100 000\nтонн",
+            "en": "100 000\ntons"
           },
           "height": 3
         },
@@ -219,8 +208,8 @@
             "en": "Iran"
           },
           "amount": {
-            "ru": "26 000\nтонн",
-            "en": "26 000\ntons"
+            "ru": "50 000\nтонн",
+            "en": "50 000\ntons"
           },
           "height": 2
         },
@@ -230,8 +219,8 @@
             "en": "China"
           },
           "amount": {
-            "ru": "5 000\nтонн",
-            "en": "5 000\ntons"
+            "ru": "20 000\nтонн",
+            "en": "20 000\ntons"
           },
           "height": 1
         },
@@ -241,8 +230,8 @@
             "en": "Domestic\nmarket"
           },
           "amount": {
-            "ru": "50 000\nтонн",
-            "en": "50 000\ntons"
+            "ru": "150 000\nтонн",
+            "en": "150 000\ntons"
           },
           "height": 5
         }
